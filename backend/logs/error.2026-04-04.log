@@ -1,0 +1,23 @@
+2026-04-04 22:05:37.492 [main] ERROR org.apache.catalina.core.AprLifecycleListener - An incompatible version [1.2.26] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
+2026-04-04 22:05:39.083 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.example.student.mapper.AttendanceMapper.getClassesByIds] is ignored, because it exists, maybe from xml file
+2026-04-04 22:05:39.083 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.example.student.mapper.AttendanceMapper.getClassAttendanceStatisticsById] is ignored, because it exists, maybe from xml file
+2026-04-04 22:05:39.183 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.example.student.mapper.ClassMapper.selectClassList] is ignored, because it exists, maybe from xml file
+2026-04-04 22:05:39.250 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.example.student.mapper.CourseMapper.selectCourseBySemester] is ignored, because it exists, maybe from xml file
+2026-04-04 22:05:39.251 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.example.student.mapper.CourseMapper.selectCourseCountByDepartment] is ignored, because it exists, maybe from xml file
+2026-04-04 22:05:39.319 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.example.student.mapper.CourseOfferingMapper.getClassIdByCourseOfferingId] is ignored, because it exists, maybe from xml file
+2026-04-04 22:05:39.333 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.example.student.mapper.CourseOfferingMapper.selectAllSemesters] is ignored, because it exists, maybe from xml file
+2026-04-04 22:05:39.601 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.example.student.mapper.NoticeMapper.selectPublishedNotices] is ignored, because it exists, maybe from xml file
+2026-04-04 22:05:48.078 [main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+

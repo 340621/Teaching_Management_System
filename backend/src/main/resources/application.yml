@@ -1,0 +1,80 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/LLM_Teaching_Management_System?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false&allowMultiQueries=true
+    username: root
+    password: 123456
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      database: 0
+      password: ''
+      timeout: 10s
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+  mapper-locations: classpath:mapper/*.xml
+
+jwt:
+  secret: f4e2e52034348f86b67cde581c0f9eb5
+  expire: 86400
+  header: Authorization
+  tokenPrefix: Bearer
+
+knife4j:
+  enable: true
+  setting:
+    language: zh-CN
+    swagger-model-name: EntityList
+    enable-swagger-models: true
+    enable-document-manage: true
+    enable-home-custom: true
+    enable-footer: false
+    enable-footer-custom: true
+    enable-host: false
+    enable-host-text: http://localhost:${server.port}${server.servlet.context-path}
+    enable-request-cache: true
+    enable-search: true
+    enable-debug: true
+    enable-open-api: true
+    enable-group: true
+  production: false
+  basic:
+    enable: false
+  documents:
+    - group: default
+      name: Document
+      locations: classpath:markdown/*
+
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    org.springframework.security: INFO
+    com.example.student: INFO
+    org.springframework: WARN
+    org.mybatis: INFO
+
+default:
+  avatar:
+    url: /api/uploads/avatar/default/default.jpg

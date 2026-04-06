@@ -1,0 +1,992 @@
+2026-04-06 00:00:05.441 [http-nio-8080-exec-8] INFO  c.example.student.filter.JwtAuthenticationFilter - 处理请求: POST /api/auth/logout
+2026-04-06 00:00:05.441 [http-nio-8080-exec-8] INFO  c.example.student.filter.JwtAuthenticationFilter - 找到令牌: eyJhbGciOi...
+2026-04-06 00:00:05.445 [http-nio-8080-exec-8] INFO  c.example.student.filter.JwtAuthenticationFilter - 从令牌中提取用户名: teacher004
+2026-04-06 00:00:05.445 [http-nio-8080-exec-8] INFO  c.example.student.security.UserDetailsServiceImpl - 加载用户信息: teacher004
+2026-04-06 00:00:05.456 [http-nio-8080-exec-8] INFO  c.example.student.security.UserDetailsServiceImpl - 用户 teacher004 的权限列表: [education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar]
+2026-04-06 00:00:05.465 [http-nio-8080-exec-8] INFO  c.example.student.security.UserDetailsServiceImpl - 用户 teacher004 的角色列表: [teacher]
+2026-04-06 00:00:05.465 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:list
+2026-04-06 00:00:05.465 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: education:student:list
+2026-04-06 00:00:05.465 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: education:teacher:list
+2026-04-06 00:00:05.465 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:list
+2026-04-06 00:00:05.465 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: course:offering:list
+2026-04-06 00:00:05.465 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:list
+2026-04-06 00:00:05.465 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: course:teaching:list
+2026-04-06 00:00:05.465 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: grade:input
+2026-04-06 00:00:05.466 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: grade:query
+2026-04-06 00:00:05.466 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: grade:stats
+2026-04-06 00:00:05.466 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: system:notice:list
+2026-04-06 00:00:05.466 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: system:todo:list
+2026-04-06 00:00:05.466 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile
+2026-04-06 00:00:05.466 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:query
+2026-04-06 00:00:05.466 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:query
+2026-04-06 00:00:05.466 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:query
+2026-04-06 00:00:05.466 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:basic
+2026-04-06 00:00:05.466 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:charts
+2026-04-06 00:00:05.466 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:query
+2026-04-06 00:00:05.466 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:edit
+2026-04-06 00:00:05.466 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:avatar
+2026-04-06 00:00:05.466 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加角色: teacher
+2026-04-06 00:00:05.466 [http-nio-8080-exec-8] INFO  com.example.student.security.LoginUser - 用户 teacher004 的权限列表: [education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher]
+2026-04-06 00:00:05.466 [http-nio-8080-exec-8] INFO  c.example.student.filter.JwtAuthenticationFilter - 加载用户详情: teacher004, 权限: education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher
+2026-04-06 00:00:05.487 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:list
+2026-04-06 00:00:05.488 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: education:student:list
+2026-04-06 00:00:05.488 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: education:teacher:list
+2026-04-06 00:00:05.488 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:list
+2026-04-06 00:00:05.488 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: course:offering:list
+2026-04-06 00:00:05.488 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:list
+2026-04-06 00:00:05.488 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: course:teaching:list
+2026-04-06 00:00:05.488 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: grade:input
+2026-04-06 00:00:05.488 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: grade:query
+2026-04-06 00:00:05.488 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: grade:stats
+2026-04-06 00:00:05.488 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: system:notice:list
+2026-04-06 00:00:05.489 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: system:todo:list
+2026-04-06 00:00:05.489 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile
+2026-04-06 00:00:05.489 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:query
+2026-04-06 00:00:05.489 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:query
+2026-04-06 00:00:05.489 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:query
+2026-04-06 00:00:05.489 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:basic
+2026-04-06 00:00:05.489 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:charts
+2026-04-06 00:00:05.489 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:query
+2026-04-06 00:00:05.489 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:edit
+2026-04-06 00:00:05.489 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:avatar
+2026-04-06 00:00:05.490 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加角色: teacher
+2026-04-06 00:00:05.490 [http-nio-8080-exec-8] INFO  com.example.student.security.LoginUser - 用户 teacher004 的权限列表: [education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher]
+2026-04-06 00:00:05.490 [http-nio-8080-exec-8] INFO  c.example.student.filter.JwtAuthenticationFilter - 用户 teacher004 认证成功，权限: education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher
+2026-04-06 00:00:05.491 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#logout()
+2026-04-06 00:00:05.491 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#logout()
+2026-04-06 00:00:05.491 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#logout()
+2026-04-06 00:00:05.493 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#logout()
+2026-04-06 00:00:05.494 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#logout()
+2026-04-06 00:00:05.494 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#logout()
+2026-04-06 00:00:05.495 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#logout()
+2026-04-06 00:00:05.496 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#logout()
+2026-04-06 00:00:05.496 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#logout()
+2026-04-06 00:00:05.498 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#logout()
+2026-04-06 00:00:05.500 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#logout()
+2026-04-06 00:00:05.500 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#logout()
+2026-04-06 00:00:05.501 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#logout()
+2026-04-06 00:00:05.501 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#logout()
+2026-04-06 00:00:05.501 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#logout()
+2026-04-06 00:00:05.503 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#logout()
+2026-04-06 00:00:05.504 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#logout()
+2026-04-06 00:00:05.504 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#logout()
+2026-04-06 00:00:05.506 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#logout()
+2026-04-06 00:00:05.506 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#logout()
+2026-04-06 00:00:05.507 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#logout()
+2026-04-06 00:00:05.507 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#logout()
+2026-04-06 00:00:05.507 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#logout()
+2026-04-06 00:00:05.537 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/api/auth/logout", parameters={}
+2026-04-06 00:00:05.539 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#logout()
+2026-04-06 00:00:05.539 [http-nio-8080-exec-8] INFO  com.example.student.common.aop.LogAspect - 接口请求: {"traceId":"ee291d20806249a68d3cd156cf2205da","args":"[]","method":"POST","ip":"0:0:0:0:0:0:0:1","function":"logout","class":"com.example.student.controller.LoginController","url":"http://localhost:8080/api/auth/logout"}
+2026-04-06 00:00:05.541 [http-nio-8080-exec-8] INFO  com.example.student.common.aop.LogAspect - 接口响应: {"traceId":"ee291d20806249a68d3cd156cf2205da","result":{"code":200,"message":"登出成功"}}
+2026-04-06 00:00:05.541 [http-nio-8080-exec-8] INFO  com.example.student.common.aop.LogAspect - 接口 [logout] 执行时间: 2ms
+2026-04-06 00:00:05.541 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2026-04-06 00:00:05.542 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [Result(code=200, message=登出成功, data=null)]
+2026-04-06 00:00:05.544 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-04-06 00:00:05.545 [http-nio-8080-exec-8] INFO  c.example.student.filter.JwtAuthenticationFilter - 请求完成: POST /api/auth/logout 状态码: 200
+2026-04-06 00:00:14.301 [http-nio-8080-exec-9] INFO  c.example.student.filter.JwtAuthenticationFilter - 处理请求: POST /api/auth/login
+2026-04-06 00:00:14.301 [http-nio-8080-exec-9] WARN  c.example.student.filter.JwtAuthenticationFilter - 请求未包含令牌: POST /api/auth/login
+2026-04-06 00:00:14.301 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#login(LoginDTO)
+2026-04-06 00:00:14.302 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#login(LoginDTO)
+2026-04-06 00:00:14.302 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#login(LoginDTO)
+2026-04-06 00:00:14.302 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#login(LoginDTO)
+2026-04-06 00:00:14.302 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#login(LoginDTO)
+2026-04-06 00:00:14.306 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#login(LoginDTO)
+2026-04-06 00:00:14.306 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#login(LoginDTO)
+2026-04-06 00:00:14.308 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#login(LoginDTO)
+2026-04-06 00:00:14.308 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#login(LoginDTO)
+2026-04-06 00:00:14.308 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#login(LoginDTO)
+2026-04-06 00:00:14.309 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#login(LoginDTO)
+2026-04-06 00:00:14.309 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#login(LoginDTO)
+2026-04-06 00:00:14.309 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#login(LoginDTO)
+2026-04-06 00:00:14.309 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#login(LoginDTO)
+2026-04-06 00:00:14.309 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#login(LoginDTO)
+2026-04-06 00:00:14.309 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#login(LoginDTO)
+2026-04-06 00:00:14.309 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#login(LoginDTO)
+2026-04-06 00:00:14.309 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#login(LoginDTO)
+2026-04-06 00:00:14.311 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#login(LoginDTO)
+2026-04-06 00:00:14.311 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#login(LoginDTO)
+2026-04-06 00:00:14.311 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#login(LoginDTO)
+2026-04-06 00:00:14.313 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/api/auth/login", parameters={}
+2026-04-06 00:00:14.313 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#login(LoginDTO)
+2026-04-06 00:00:14.460 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [LoginDTO(username=teacher001, password=123456)]
+2026-04-06 00:00:14.522 [http-nio-8080-exec-9] INFO  com.example.student.common.aop.LogAspect - 接口请求: {"traceId":"6e8f87c98192443b9c0c2795c27824fb","args":"[LoginDTO(username=teacher001, password=123456)]","method":"POST","ip":"0:0:0:0:0:0:0:1","function":"login","class":"com.example.student.controller.LoginController","url":"http://localhost:8080/api/auth/login"}
+2026-04-06 00:00:14.870 [http-nio-8080-exec-9] INFO  c.example.student.security.UserDetailsServiceImpl - 加载用户信息: teacher001
+2026-04-06 00:00:14.890 [http-nio-8080-exec-9] INFO  c.example.student.security.UserDetailsServiceImpl - 用户 teacher001 的权限列表: [education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar]
+2026-04-06 00:00:14.895 [http-nio-8080-exec-9] INFO  c.example.student.security.UserDetailsServiceImpl - 用户 teacher001 的角色列表: [teacher]
+2026-04-06 00:00:15.223 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:list
+2026-04-06 00:00:15.223 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: education:student:list
+2026-04-06 00:00:15.223 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: education:teacher:list
+2026-04-06 00:00:15.223 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:list
+2026-04-06 00:00:15.223 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: course:offering:list
+2026-04-06 00:00:15.224 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:list
+2026-04-06 00:00:15.224 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: course:teaching:list
+2026-04-06 00:00:15.224 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: grade:input
+2026-04-06 00:00:15.224 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: grade:query
+2026-04-06 00:00:15.224 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: grade:stats
+2026-04-06 00:00:15.224 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: system:notice:list
+2026-04-06 00:00:15.224 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: system:todo:list
+2026-04-06 00:00:15.224 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile
+2026-04-06 00:00:15.224 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:query
+2026-04-06 00:00:15.224 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:query
+2026-04-06 00:00:15.224 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:query
+2026-04-06 00:00:15.224 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:basic
+2026-04-06 00:00:15.224 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:charts
+2026-04-06 00:00:15.224 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:query
+2026-04-06 00:00:15.224 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:edit
+2026-04-06 00:00:15.224 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:avatar
+2026-04-06 00:00:15.224 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加角色: teacher
+2026-04-06 00:00:15.224 [http-nio-8080-exec-9] INFO  com.example.student.security.LoginUser - 用户 teacher001 的权限列表: [education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher]
+2026-04-06 00:00:15.299 [http-nio-8080-exec-9] INFO  com.example.student.common.aop.LogAspect - 接口响应: {"traceId":"6e8f87c98192443b9c0c2795c27824fb","result":{"code":200,"message":"登录成功","data":{"userId":3,"username":"teacher001","name":"张教授1","avatar":"/api/uploads/avatar/default/default.jpg","userType":1,"teacherId":1,"studentId":null,"roles":["teacher"],"permissions":["education:department:list","education:student:list","education:teacher:list","course:course:list","course:offering:list","course:selection:list","course:teaching:list","grade:input","grade:query","grade:stats","system:notice:list","system:todo:list","system:user:profile","education:department:query","course:course:query","course:selection:query","dashboard:basic","dashboard:charts","system:user:profile:query","system:user:profile:edit","system:user:profile:avatar"],"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZWFjaGVyMDAxIiwiaWF0IjoxNzc1NDA0ODE1LCJleHAiOjE3NzU0OTEyMTV9.HdILFJPXuBdK_oqWBqYYSzQYyJpigdcnSdoOYYKG4ac"}}}
+2026-04-06 00:00:15.299 [http-nio-8080-exec-9] WARN  com.example.student.common.aop.LogAspect - 接口 [login] 执行时间: 777ms, 请检查性能问题
+2026-04-06 00:00:15.301 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2026-04-06 00:00:15.302 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [Result(code=200, message=登录成功, data=LoginResponseDTO(userId=3, username=teacher001, name=张教授1, avata (truncated)...]
+2026-04-06 00:00:15.305 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-04-06 00:00:15.306 [http-nio-8080-exec-9] INFO  c.example.student.filter.JwtAuthenticationFilter - 请求完成: POST /api/auth/login 状态码: 200
+2026-04-06 00:00:15.320 [http-nio-8080-exec-1] INFO  c.example.student.filter.JwtAuthenticationFilter - 处理请求: GET /api/auth/user/info
+2026-04-06 00:00:15.320 [http-nio-8080-exec-1] INFO  c.example.student.filter.JwtAuthenticationFilter - 找到令牌: eyJhbGciOi...
+2026-04-06 00:00:15.330 [http-nio-8080-exec-1] INFO  c.example.student.filter.JwtAuthenticationFilter - 从令牌中提取用户名: teacher001
+2026-04-06 00:00:15.330 [http-nio-8080-exec-1] INFO  c.example.student.security.UserDetailsServiceImpl - 加载用户信息: teacher001
+2026-04-06 00:00:15.342 [http-nio-8080-exec-1] INFO  c.example.student.security.UserDetailsServiceImpl - 用户 teacher001 的权限列表: [education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar]
+2026-04-06 00:00:15.347 [http-nio-8080-exec-1] INFO  c.example.student.security.UserDetailsServiceImpl - 用户 teacher001 的角色列表: [teacher]
+2026-04-06 00:00:15.347 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:list
+2026-04-06 00:00:15.347 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: education:student:list
+2026-04-06 00:00:15.347 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: education:teacher:list
+2026-04-06 00:00:15.347 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:list
+2026-04-06 00:00:15.347 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: course:offering:list
+2026-04-06 00:00:15.347 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:list
+2026-04-06 00:00:15.347 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: course:teaching:list
+2026-04-06 00:00:15.347 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: grade:input
+2026-04-06 00:00:15.347 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: grade:query
+2026-04-06 00:00:15.347 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: grade:stats
+2026-04-06 00:00:15.347 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: system:notice:list
+2026-04-06 00:00:15.348 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: system:todo:list
+2026-04-06 00:00:15.348 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile
+2026-04-06 00:00:15.348 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:query
+2026-04-06 00:00:15.348 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:query
+2026-04-06 00:00:15.348 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:query
+2026-04-06 00:00:15.348 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:basic
+2026-04-06 00:00:15.348 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:charts
+2026-04-06 00:00:15.348 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:query
+2026-04-06 00:00:15.348 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:edit
+2026-04-06 00:00:15.348 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:avatar
+2026-04-06 00:00:15.348 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加角色: teacher
+2026-04-06 00:00:15.348 [http-nio-8080-exec-1] INFO  com.example.student.security.LoginUser - 用户 teacher001 的权限列表: [education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher]
+2026-04-06 00:00:15.348 [http-nio-8080-exec-1] INFO  c.example.student.filter.JwtAuthenticationFilter - 加载用户详情: teacher001, 权限: education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher
+2026-04-06 00:00:15.356 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:list
+2026-04-06 00:00:15.358 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: education:student:list
+2026-04-06 00:00:15.358 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: education:teacher:list
+2026-04-06 00:00:15.358 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:list
+2026-04-06 00:00:15.358 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: course:offering:list
+2026-04-06 00:00:15.358 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:list
+2026-04-06 00:00:15.358 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: course:teaching:list
+2026-04-06 00:00:15.358 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: grade:input
+2026-04-06 00:00:15.358 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: grade:query
+2026-04-06 00:00:15.358 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: grade:stats
+2026-04-06 00:00:15.358 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: system:notice:list
+2026-04-06 00:00:15.358 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: system:todo:list
+2026-04-06 00:00:15.358 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile
+2026-04-06 00:00:15.358 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:query
+2026-04-06 00:00:15.358 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:query
+2026-04-06 00:00:15.358 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:query
+2026-04-06 00:00:15.358 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:basic
+2026-04-06 00:00:15.358 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:charts
+2026-04-06 00:00:15.358 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:query
+2026-04-06 00:00:15.358 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:edit
+2026-04-06 00:00:15.360 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:avatar
+2026-04-06 00:00:15.360 [http-nio-8080-exec-1] DEBUG com.example.student.security.LoginUser - 添加角色: teacher
+2026-04-06 00:00:15.360 [http-nio-8080-exec-1] INFO  com.example.student.security.LoginUser - 用户 teacher001 的权限列表: [education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher]
+2026-04-06 00:00:15.360 [http-nio-8080-exec-1] INFO  c.example.student.filter.JwtAuthenticationFilter - 用户 teacher001 认证成功，权限: education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher
+2026-04-06 00:00:15.360 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getUserInfo()
+2026-04-06 00:00:15.360 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getUserInfo()
+2026-04-06 00:00:15.360 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getUserInfo()
+2026-04-06 00:00:15.361 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getUserInfo()
+2026-04-06 00:00:15.361 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getUserInfo()
+2026-04-06 00:00:15.361 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getUserInfo()
+2026-04-06 00:00:15.361 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getUserInfo()
+2026-04-06 00:00:15.363 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getUserInfo()
+2026-04-06 00:00:15.363 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getUserInfo()
+2026-04-06 00:00:15.363 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getUserInfo()
+2026-04-06 00:00:15.363 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getUserInfo()
+2026-04-06 00:00:15.365 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getUserInfo()
+2026-04-06 00:00:15.366 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getUserInfo()
+2026-04-06 00:00:15.366 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getUserInfo()
+2026-04-06 00:00:15.366 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getUserInfo()
+2026-04-06 00:00:15.367 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getUserInfo()
+2026-04-06 00:00:15.367 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getUserInfo()
+2026-04-06 00:00:15.367 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getUserInfo()
+2026-04-06 00:00:15.369 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getUserInfo()
+2026-04-06 00:00:15.369 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getUserInfo()
+2026-04-06 00:00:15.369 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getUserInfo()
+2026-04-06 00:00:15.370 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getUserInfo()
+2026-04-06 00:00:15.370 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/auth/user/info", parameters={}
+2026-04-06 00:00:15.370 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getUserInfo()
+2026-04-06 00:00:15.372 [http-nio-8080-exec-1] INFO  com.example.student.common.aop.LogAspect - 接口请求: {"traceId":"5de50fb3b54f4627b9d5cd57f0f2d274","args":"[]","method":"GET","ip":"0:0:0:0:0:0:0:1","function":"getUserInfo","class":"com.example.student.controller.LoginController","url":"http://localhost:8080/api/auth/user/info"}
+2026-04-06 00:00:15.390 [http-nio-8080-exec-1] INFO  com.example.student.common.aop.LogAspect - 接口响应: {"traceId":"5de50fb3b54f4627b9d5cd57f0f2d274","result":{"code":200,"message":"操作成功","data":{"userId":3,"username":"teacher001","name":"张教授1","avatar":"/api/uploads/avatar/default/default.jpg","userType":1,"teacherId":1,"studentId":null,"roles":["teacher"],"permissions":["education:department:list","education:student:list","education:teacher:list","course:course:list","course:offering:list","course:selection:list","course:teaching:list","grade:input","grade:query","grade:stats","system:notice:list","system:todo:list","system:user:profile","education:department:query","course:course:query","course:selection:query","dashboard:basic","dashboard:charts","system:user:profile:query","system:user:profile:edit","system:user:profile:avatar"],"token":null}}}
+2026-04-06 00:00:15.390 [http-nio-8080-exec-1] INFO  com.example.student.common.aop.LogAspect - 接口 [getUserInfo] 执行时间: 18ms
+2026-04-06 00:00:15.391 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2026-04-06 00:00:15.391 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [Result(code=200, message=操作成功, data=LoginResponseDTO(userId=3, username=teacher001, name=张教授1, avata (truncated)...]
+2026-04-06 00:00:15.393 [http-nio-8080-exec-1] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-04-06 00:00:15.393 [http-nio-8080-exec-1] INFO  c.example.student.filter.JwtAuthenticationFilter - 请求完成: GET /api/auth/user/info 状态码: 200
+2026-04-06 00:00:15.405 [http-nio-8080-exec-6] INFO  c.example.student.filter.JwtAuthenticationFilter - 处理请求: GET /api/auth/routes
+2026-04-06 00:00:15.405 [http-nio-8080-exec-6] INFO  c.example.student.filter.JwtAuthenticationFilter - 找到令牌: eyJhbGciOi...
+2026-04-06 00:00:15.412 [http-nio-8080-exec-6] INFO  c.example.student.filter.JwtAuthenticationFilter - 从令牌中提取用户名: teacher001
+2026-04-06 00:00:15.412 [http-nio-8080-exec-6] INFO  c.example.student.security.UserDetailsServiceImpl - 加载用户信息: teacher001
+2026-04-06 00:00:15.421 [http-nio-8080-exec-6] INFO  c.example.student.security.UserDetailsServiceImpl - 用户 teacher001 的权限列表: [education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar]
+2026-04-06 00:00:15.426 [http-nio-8080-exec-6] INFO  c.example.student.security.UserDetailsServiceImpl - 用户 teacher001 的角色列表: [teacher]
+2026-04-06 00:00:15.426 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:list
+2026-04-06 00:00:15.426 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: education:student:list
+2026-04-06 00:00:15.426 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: education:teacher:list
+2026-04-06 00:00:15.426 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:list
+2026-04-06 00:00:15.441 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: course:offering:list
+2026-04-06 00:00:15.441 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:list
+2026-04-06 00:00:15.441 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: course:teaching:list
+2026-04-06 00:00:15.441 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: grade:input
+2026-04-06 00:00:15.441 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: grade:query
+2026-04-06 00:00:15.441 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: grade:stats
+2026-04-06 00:00:15.441 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: system:notice:list
+2026-04-06 00:00:15.441 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: system:todo:list
+2026-04-06 00:00:15.441 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile
+2026-04-06 00:00:15.441 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:query
+2026-04-06 00:00:15.447 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:query
+2026-04-06 00:00:15.447 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:query
+2026-04-06 00:00:15.447 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:basic
+2026-04-06 00:00:15.447 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:charts
+2026-04-06 00:00:15.447 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:query
+2026-04-06 00:00:15.447 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:edit
+2026-04-06 00:00:15.447 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:avatar
+2026-04-06 00:00:15.447 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加角色: teacher
+2026-04-06 00:00:15.447 [http-nio-8080-exec-6] INFO  com.example.student.security.LoginUser - 用户 teacher001 的权限列表: [education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher]
+2026-04-06 00:00:15.447 [http-nio-8080-exec-6] INFO  c.example.student.filter.JwtAuthenticationFilter - 加载用户详情: teacher001, 权限: education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher
+2026-04-06 00:00:15.458 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:list
+2026-04-06 00:00:15.458 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: education:student:list
+2026-04-06 00:00:15.458 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: education:teacher:list
+2026-04-06 00:00:15.458 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:list
+2026-04-06 00:00:15.458 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: course:offering:list
+2026-04-06 00:00:15.458 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:list
+2026-04-06 00:00:15.458 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: course:teaching:list
+2026-04-06 00:00:15.458 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: grade:input
+2026-04-06 00:00:15.458 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: grade:query
+2026-04-06 00:00:15.458 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: grade:stats
+2026-04-06 00:00:15.458 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: system:notice:list
+2026-04-06 00:00:15.459 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: system:todo:list
+2026-04-06 00:00:15.459 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile
+2026-04-06 00:00:15.459 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:query
+2026-04-06 00:00:15.459 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:query
+2026-04-06 00:00:15.478 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:query
+2026-04-06 00:00:15.478 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:basic
+2026-04-06 00:00:15.478 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:charts
+2026-04-06 00:00:15.478 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:query
+2026-04-06 00:00:15.478 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:edit
+2026-04-06 00:00:15.478 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:avatar
+2026-04-06 00:00:15.478 [http-nio-8080-exec-6] DEBUG com.example.student.security.LoginUser - 添加角色: teacher
+2026-04-06 00:00:15.478 [http-nio-8080-exec-6] INFO  com.example.student.security.LoginUser - 用户 teacher001 的权限列表: [education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher]
+2026-04-06 00:00:15.479 [http-nio-8080-exec-6] INFO  c.example.student.filter.JwtAuthenticationFilter - 用户 teacher001 认证成功，权限: education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher
+2026-04-06 00:00:15.479 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getRoutes()
+2026-04-06 00:00:15.480 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getRoutes()
+2026-04-06 00:00:15.480 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getRoutes()
+2026-04-06 00:00:15.480 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getRoutes()
+2026-04-06 00:00:15.480 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getRoutes()
+2026-04-06 00:00:15.480 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getRoutes()
+2026-04-06 00:00:15.480 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getRoutes()
+2026-04-06 00:00:15.480 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getRoutes()
+2026-04-06 00:00:15.480 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getRoutes()
+2026-04-06 00:00:15.481 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getRoutes()
+2026-04-06 00:00:15.482 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getRoutes()
+2026-04-06 00:00:15.482 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getRoutes()
+2026-04-06 00:00:15.501 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getRoutes()
+2026-04-06 00:00:15.501 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getRoutes()
+2026-04-06 00:00:15.501 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getRoutes()
+2026-04-06 00:00:15.501 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getRoutes()
+2026-04-06 00:00:15.501 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getRoutes()
+2026-04-06 00:00:15.501 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getRoutes()
+2026-04-06 00:00:15.501 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getRoutes()
+2026-04-06 00:00:15.501 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getRoutes()
+2026-04-06 00:00:15.501 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getRoutes()
+2026-04-06 00:00:15.501 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getRoutes()
+2026-04-06 00:00:15.501 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getRoutes()
+2026-04-06 00:00:15.502 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/auth/routes", parameters={}
+2026-04-06 00:00:15.502 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.LoginController#getRoutes()
+2026-04-06 00:00:15.503 [http-nio-8080-exec-6] INFO  com.example.student.common.aop.LogAspect - 接口请求: {"traceId":"4fc9c51054af43afbd78da5eb2fc26d2","args":"[]","method":"GET","ip":"0:0:0:0:0:0:0:1","function":"getRoutes","class":"com.example.student.controller.LoginController","url":"http://localhost:8080/api/auth/routes"}
+2026-04-06 00:00:15.547 [http-nio-8080-exec-6] INFO  com.example.student.common.aop.LogAspect - 接口响应: {"traceId":"4fc9c51054af43afbd78da5eb2fc26d2","result":{"code":200,"message":"操作成功","data":[{"id":900,"menuName":"仪表盘","parentId":0,"orderNum":0,"path":"/dashboard","component":"dashboard/index.vue","query":"","isFrame":1,"isCache":0,"menuType":"C","visible":0,"status":0,"perms":"","icon":"Dashboard","createTime":"2025-05-14T15:00:15","updateTime":"2025-05-14T15:00:15","remark":"仪表盘菜单"},{"id":3,"menuName":"课程管理","parentId":0,"orderNum":3,"path":"/course","component":null,"query":"","isFrame":1,"isCache":0,"menuType":"M","visible":0,"status":0,"perms":"","icon":"Reading","createTime":"2025-05-14T14:59:57","updateTime":"2025-05-14T14:59:57","remark":"课程管理目录"},{"id":7,"menuName":"选课管理","parentId":0,"orderNum":7,"path":"/selection","component":null,"query":"","isFrame":1,"isCache":0,"menuType":"M","visible":0,"status":0,"perms":"","icon":"Calendar","createTime":"2025-05-14T14:59:57","updateTime":"2025-05-14T14:59:57","remark":"选课管理目录"},{"id":8,"menuName":"成绩管理","parentId":0,"orderNum":8,"path":"/grade","component":null,"query":"","isFrame":1,"isCache":0,"menuType":"M","visible":0,"status":0,"perms":"","icon":"Document","createTime":"2025-05-14T14:59:57","updateTime":"2025-05-14T14:59:57","remark":"成绩管理目录"},{"id":910,"menuName":"消息中心","parentId":0,"orderNum":9,"path":"/message","component":null,"query":"","isFrame":1,"isCache":0,"menuType":"M","visible":0,"status":0,"perms":"","icon":"Message","createTime":"2025-05-14T15:00:15","updateTime":"2025-05-14T15:00:15","remark":"消息中心目录"},{"id":200,"menuName":"院系管理","parentId":2,"orderNum":1,"path":"/department","component":"education/department/index.vue","query":"","isFrame":1,"isCache":0,"menuType":"C","visible":0,"status":0,"perms":"education:department:list","icon":"OfficeBuilding","createTime":"2025-05-14T15:00:06","updateTime":"2025-05-14T15:00:06","remark":"院系管理菜单"},{"id":500,"menuName":"课程列表","parentId":3,"orderNum":1,"path":"/course-list","component":"course/index.vue","query":"","isFrame":1,"isCache":0,"menuType":"C","visible":0,"status":0,"perms":"course:course:list","icon":"List","createTime":"2025-05-14T15:00:22","updateTime":"2025-05-14T15:00:22","remark":"课程列表菜单"},{"id":502,"menuName":"课程开设记录","parentId":3,"orderNum":3,"path":"/course-offering","component":"course/offering/index.vue","query":"","isFrame":1,"isCache":0,"menuType":"C","visible":0,"status":0,"perms":"course:offering:list","icon":"Notebook","createTime":"2025-05-14T15:00:22","updateTime":"2025-05-17T18:01:49","remark":"课程开设记录菜单"},{"id":300,"menuName":"学生列表","parentId":5,"orderNum":1,"path":"/student-list","component":"student/index.vue","query":"","isFrame":1,"isCache":0,"menuType":"C","visible":0,"status":0,"perms":"education:student:list","icon":"List","createTime":"2025-05-14T15:00:06","updateTime":"2025-05-14T15:00:06","remark":"学生列表菜单"},{"id":400,"menuName":"教师列表","parentId":6,"orderNum":1,"path":"/teacher-list","component":"teacher/index.vue","query":"","isFrame":1,"isCache":0,"menuType":"C","visible":0,"status":0,"perms":"education:teacher:list","icon":"List","createTime":"2025-05-14T15:00:06","updateTime":"2025-05-14T15:00:06","remark":"教师列表菜单"},{"id":600,"menuName":"选课管理","parentId":7,"orderNum":1,"path":"/selection-manage","component":"selection/manage/index.vue","query":"","isFrame":1,"isCache":0,"menuType":"C","visible":0,"status":0,"perms":"course:selection:list","icon":"Setting","createTime":"2025-05-14T15:00:22","updateTime":"2025-05-14T15:00:22","remark":"选课管理菜单"},{"id":601,"menuName":"授课列表","parentId":7,"orderNum":2,"path":"/course-teaching","component":"course/offering/index.vue","query":"","isFrame":1,"isCache":0,"menuType":"C","visible":0,"status":0,"perms":"course:teaching:list","icon":"Reading","createTime":"2025-05-14T15:00:22","updateTime":"2025-05-14T15:00:22","remark":"授课列表菜单"},{"id":800,"menuName":"成绩录入","parentId":8,"orderNum":1,"path":"/grade-input","component":"grade/input/index.vue","query":"","isFrame":1,"isCache":0,"menuType":"C","visible":0,"status":0,"perms":"grade:input","icon":"Edit","createTime":"2025-05-14T15:00:22","updateTime":"2025-05-14T15:00:22","remark":"成绩录入菜单"},{"id":801,"menuName":"成绩查询","parentId":8,"orderNum":2,"path":"/grade-check","component":"grade/check/index.vue","query":"","isFrame":1,"isCache":0,"menuType":"C","visible":0,"status":0,"perms":"grade:query","icon":"Search","createTime":"2025-05-14T15:00:22","updateTime":"2025-05-14T15:00:22","remark":"成绩查询菜单"},{"id":802,"menuName":"成绩统计","parentId":8,"orderNum":3,"path":"/grade-stats","component":"grade/stats/index.vue","query":"","isFrame":1,"isCache":0,"menuType":"C","visible":0,"status":0,"perms":"grade:stats","icon":"DataAnalysis","createTime":"2025-05-14T15:00:22","updateTime":"2025-05-14T15:00:22","remark":"成绩统计菜单"},{"id":950,"menuName":"个人资料","parentId":10,"orderNum":2,"path":"/profile","component":"profile/index.vue","query":"","isFrame":1,"isCache":0,"menuType":"C","visible":0,"status":0,"perms":"system:user:profile","icon":"User","createTime":"2025-05-14T16:45:40","updateTime":"2025-05-14T16:45:40","remark":"个人资料菜单"},{"id":2001,"menuName":"院系查询","parentId":200,"orderNum":1,"path":"","component":null,"query":"","isFrame":1,"isCache":0,"menuType":"F","visible":0,"status":0,"perms":"education:department:query","icon":"","createTime":"2025-05-14T15:00:06","updateTime":"2025-05-14T15:00:06","remark":"院系查询权限"},{"id":3001,"menuName":"学生查询","parentId":300,"orderNum":1,"path":"","component":null,"query":"","isFrame":1,"isCache":0,"menuType":"F","visible":0,"status":0,"perms":"education:student:list","icon":"","createTime":"2025-05-14T15:00:06","updateTime":"2025-05-14T15:00:06","remark":"学生查询权限"},{"id":4001,"menuName":"教师查询","parentId":400,"orderNum":1,"path":"","component":null,"query":"","isFrame":1,"isCache":0,"menuType":"F","visible":0,"status":0,"perms":"education:teacher:list","icon":"","createTime":"2025-05-14T15:00:06","updateTime":"2025-05-14T15:00:06","remark":"教师查询权限"},{"id":5001,"menuName":"课程查询","parentId":500,"orderNum":1,"path":"","component":null,"query":"","isFrame":1,"isCache":0,"menuType":"F","visible":0,"status":0,"perms":"course:course:query","icon":"","createTime":"2025-05-14T15:00:22","updateTime":"2025-05-14T15:00:22","remark":"课程查询权限"},{"id":5021,"menuName":"开课记录查询","parentId":502,"orderNum":1,"path":"","component":null,"query":"","isFrame":1,"isCache":0,"menuType":"F","visible":0,"status":0,"perms":"course:offering:list","icon":"","createTime":"2025-05-14T15:00:22","updateTime":"2025-05-14T15:00:22","remark":"开课记录查询权限"},{"id":6001,"menuName":"选课记录查询","parentId":600,"orderNum":1,"path":"","component":null,"query":"","isFrame":1,"isCache":0,"menuType":"F","visible":0,"status":0,"perms":"course:selection:list","icon":"","createTime":"2025-05-14T15:00:22","updateTime":"2025-05-14T15:00:22","remark":"选课记录查询权限"},{"id":6002,"menuName":"选课记录详情","parentId":600,"orderNum":2,"path":"","component":null,"query":"","isFrame":1,"isCache":0,"menuType":"F","visible":0,"status":0,"perms":"course:selection:query","icon":"","createTime":"2025-05-14T15:00:22","updateTime":"2025-05-14T15:00:22","remark":"选课记录详情权限"},{"id":6011,"menuName":"授课查询","parentId":601,"orderNum":1,"path":"","component":null,"query":"","isFrame":1,"isCache":0,"menuType":"F","visible":0,"status":0,"perms":"course:teaching:list","icon":"","createTime":"2025-05-14T15:00:22","updateTime":"2025-05-14T15:00:22","remark":"授课查询权限"},{"id":8001,"menuName":"成绩录入权限","parentId":800,"orderNum":1,"path":"","component":null,"query":"","isFrame":1,"isCache":0,"menuType":"F","visible":0,"status":0,"perms":"grade:input","icon":"","createTime":"2025-05-14T15:00:22","updateTime":"2025-05-14T15:00:22","remark":"成绩录入权限"},{"id":8011,"menuName":"成绩查询权限","parentId":801,"orderNum":1,"path":"","component":null,"query":"","isFrame":1,"isCache":0,"menuType":"F","visible":0,"status":0,"perms":"grade:query","icon":"","createTime":"2025-05-14T15:00:22","updateTime":"2025-05-14T15:00:22","remark":"成绩查询权限"},{"id":8021,"menuName":"成绩统计权限","parentId":802,"orderNum":1,"path":"","component":null,"query":"","isFrame":1,"isCache":0,"menuType":"F","visible":0,"status":0,"perms":"grade:stats","icon":"","createTime":"2025-05-14T15:00:22","updateTime":"2025-05-14T15:00:22","remark":"成绩统计权限"},{"id":9001,"menuName":"基本数据","parentId":900,"orderNum":1,"path":"","component":null,"query":"","isFrame":1,"isCache":0,"menuType":"F","visible":0,"status":0,"perms":"dashboard:basic","icon":"","createTime":"2025-05-14T15:00:15","updateTime":"2025-05-14T15:00:15","remark":"基本数据查询权限"},{"id":9002,"menuName":"图表数据","parentId":900,"orderNum":2,"path":"","component":null,"query":"","isFrame":1,"isCache":0,"menuType":"F","visible":0,"status":0,"perms":"dashboard:charts","icon":"","createTime":"2025-05-14T15:00:15","updateTime":"2025-05-14T15:00:15","remark":"图表数据查询权限"},{"id":911,"menuName":"通知公告","parentId":910,"orderNum":1,"path":"/notice","component":"message/notice/index.vue","query":"","isFrame":1,"isCache":0,"menuType":"C","visible":0,"status":0,"perms":"system:notice:list","icon":"Bell","createTime":"2025-05-14T15:00:15","updateTime":"2025-05-14T15:00:15","remark":"通知公告菜单"},{"id":912,"menuName":"待办事项","parentId":910,"orderNum":2,"path":"/todo","component":"message/todo/index.vue","query":"","isFrame":1,"isCache":0,"menuType":"C","visible":0,"status":0,"perms":"system:todo:list","icon":"List","createTime":"2025-05-14T15:00:15","updateTime":"2025-05-14T15:00:15","remark":"待办事项菜单"},{"id":9501,"menuName":"个人资料查询","parentId":950,"orderNum":1,"path":"","component":null,"query":"","isFrame":1,"isCache":0,"menuType":"F","visible":0,"status":0,"perms":"system:user:profile:query","icon":"","createTime":"2025-05-14T16:45:40","updateTime":"2025-05-14T16:45:40","remark":"个人资料查询权限"},{"id":9502,"menuName":"个人资料修改","parentId":950,"orderNum":2,"path":"","component":null,"query":"","isFrame":1,"isCache":0,"menuType":"F","visible":0,"status":0,"perms":"system:user:profile:edit","icon":"","createTime":"2025-05-14T16:45:40","updateTime":"2025-05-14T16:45:40","remark":"个人资料修改权限"},{"id":9503,"menuName":"头像上传","parentId":950,"orderNum":3,"path":"","component":null,"query":"","isFrame":1,"isCache":0,"menuType":"F","visible":0,"status":0,"perms":"system:user:profile:avatar","icon":"","createTime":"2025-05-14T16:45:40","updateTime":"2025-05-14T16:45:40","remark":"头像上传权限"}]}}
+2026-04-06 00:00:15.561 [http-nio-8080-exec-6] INFO  com.example.student.common.aop.LogAspect - 接口 [getRoutes] 执行时间: 58ms
+2026-04-06 00:00:15.563 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2026-04-06 00:00:15.575 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [Result(code=200, message=操作成功, data=[SysMenu(id=900, menuName=仪表盘, parentId=0, orderNum=0, path=/das (truncated)...]
+2026-04-06 00:00:15.577 [http-nio-8080-exec-6] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-04-06 00:00:15.578 [http-nio-8080-exec-6] INFO  c.example.student.filter.JwtAuthenticationFilter - 请求完成: GET /api/auth/routes 状态码: 200
+2026-04-06 00:00:15.710 [http-nio-8080-exec-2] INFO  c.example.student.filter.JwtAuthenticationFilter - 处理请求: GET /api/uploads/avatar/default/default.jpg
+2026-04-06 00:00:15.710 [http-nio-8080-exec-2] WARN  c.example.student.filter.JwtAuthenticationFilter - 请求未包含令牌: GET /api/uploads/avatar/default/default.jpg
+2026-04-06 00:00:15.710 [http-nio-8080-exec-4] INFO  c.example.student.filter.JwtAuthenticationFilter - 处理请求: GET /api/dashboard/statistics
+2026-04-06 00:00:15.710 [http-nio-8080-exec-4] INFO  c.example.student.filter.JwtAuthenticationFilter - 找到令牌: eyJhbGciOi...
+2026-04-06 00:00:15.715 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:D:/桌面/LLM_Teaching_Management_System/uploads/]]
+2026-04-06 00:00:15.717 [http-nio-8080-exec-4] INFO  c.example.student.filter.JwtAuthenticationFilter - 从令牌中提取用户名: teacher001
+2026-04-06 00:00:15.717 [http-nio-8080-exec-4] INFO  c.example.student.security.UserDetailsServiceImpl - 加载用户信息: teacher001
+2026-04-06 00:00:15.718 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:D:/桌面/LLM_Teaching_Management_System/uploads/]]
+2026-04-06 00:00:15.721 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:D:/桌面/LLM_Teaching_Management_System/uploads/]]
+2026-04-06 00:00:15.724 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:D:/桌面/LLM_Teaching_Management_System/uploads/]]
+2026-04-06 00:00:15.728 [http-nio-8080-exec-4] INFO  c.example.student.security.UserDetailsServiceImpl - 用户 teacher001 的权限列表: [education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar]
+2026-04-06 00:00:15.729 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:D:/桌面/LLM_Teaching_Management_System/uploads/]]
+2026-04-06 00:00:15.742 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:D:/桌面/LLM_Teaching_Management_System/uploads/]]
+2026-04-06 00:00:15.744 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/uploads/avatar/default/default.jpg", parameters={}
+2026-04-06 00:00:15.745 [http-nio-8080-exec-4] INFO  c.example.student.security.UserDetailsServiceImpl - 用户 teacher001 的角色列表: [teacher]
+2026-04-06 00:00:15.745 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:list
+2026-04-06 00:00:15.745 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: education:student:list
+2026-04-06 00:00:15.745 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: education:teacher:list
+2026-04-06 00:00:15.745 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:list
+2026-04-06 00:00:15.745 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: course:offering:list
+2026-04-06 00:00:15.745 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:list
+2026-04-06 00:00:15.745 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: course:teaching:list
+2026-04-06 00:00:15.745 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: grade:input
+2026-04-06 00:00:15.745 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: grade:query
+2026-04-06 00:00:15.745 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: grade:stats
+2026-04-06 00:00:15.745 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: system:notice:list
+2026-04-06 00:00:15.745 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: system:todo:list
+2026-04-06 00:00:15.745 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile
+2026-04-06 00:00:15.745 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:query
+2026-04-06 00:00:15.745 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:query
+2026-04-06 00:00:15.746 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:query
+2026-04-06 00:00:15.746 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:basic
+2026-04-06 00:00:15.746 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:charts
+2026-04-06 00:00:15.746 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:query
+2026-04-06 00:00:15.746 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:edit
+2026-04-06 00:00:15.746 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:avatar
+2026-04-06 00:00:15.746 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加角色: teacher
+2026-04-06 00:00:15.746 [http-nio-8080-exec-4] INFO  com.example.student.security.LoginUser - 用户 teacher001 的权限列表: [education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher]
+2026-04-06 00:00:15.746 [http-nio-8080-exec-4] INFO  c.example.student.filter.JwtAuthenticationFilter - 加载用户详情: teacher001, 权限: education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher
+2026-04-06 00:00:15.746 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [URL [file:D:/桌面/LLM_Teaching_Management_System/uploads/]]
+2026-04-06 00:00:15.746 [http-nio-8080-exec-2] DEBUG o.s.w.servlet.resource.ResourceHttpRequestHandler - Resource not found
+2026-04-06 00:00:15.747 [http-nio-8080-exec-2] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2026-04-06 00:00:15.747 [http-nio-8080-exec-2] INFO  c.example.student.filter.JwtAuthenticationFilter - 请求完成: GET /api/uploads/avatar/default/default.jpg 状态码: 404
+2026-04-06 00:00:15.748 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:15.749 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:15.750 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:15.751 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:15.753 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:15.753 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:15.754 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:15.755 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:15.757 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:15.758 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:15.758 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:list
+2026-04-06 00:00:15.758 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: education:student:list
+2026-04-06 00:00:15.758 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: education:teacher:list
+2026-04-06 00:00:15.758 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:list
+2026-04-06 00:00:15.758 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: course:offering:list
+2026-04-06 00:00:15.758 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:list
+2026-04-06 00:00:15.758 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: course:teaching:list
+2026-04-06 00:00:15.758 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: grade:input
+2026-04-06 00:00:15.758 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: grade:query
+2026-04-06 00:00:15.758 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: grade:stats
+2026-04-06 00:00:15.758 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: system:notice:list
+2026-04-06 00:00:15.758 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: system:todo:list
+2026-04-06 00:00:15.758 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile
+2026-04-06 00:00:15.758 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:query
+2026-04-06 00:00:15.758 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:query
+2026-04-06 00:00:15.758 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:query
+2026-04-06 00:00:15.758 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:basic
+2026-04-06 00:00:15.758 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:charts
+2026-04-06 00:00:15.758 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:query
+2026-04-06 00:00:15.758 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:edit
+2026-04-06 00:00:15.758 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:avatar
+2026-04-06 00:00:15.758 [http-nio-8080-exec-4] DEBUG com.example.student.security.LoginUser - 添加角色: teacher
+2026-04-06 00:00:15.758 [http-nio-8080-exec-4] INFO  com.example.student.security.LoginUser - 用户 teacher001 的权限列表: [education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher]
+2026-04-06 00:00:15.758 [http-nio-8080-exec-4] INFO  c.example.student.filter.JwtAuthenticationFilter - 用户 teacher001 认证成功，权限: education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher
+2026-04-06 00:00:15.758 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:15.759 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getStatistics()
+2026-04-06 00:00:15.759 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getStatistics()
+2026-04-06 00:00:15.759 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getStatistics()
+2026-04-06 00:00:15.760 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getStatistics()
+2026-04-06 00:00:15.760 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getStatistics()
+2026-04-06 00:00:15.760 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:15.760 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getStatistics()
+2026-04-06 00:00:15.760 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getStatistics()
+2026-04-06 00:00:15.760 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getStatistics()
+2026-04-06 00:00:15.760 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getStatistics()
+2026-04-06 00:00:15.760 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getStatistics()
+2026-04-06 00:00:15.760 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getStatistics()
+2026-04-06 00:00:15.760 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getStatistics()
+2026-04-06 00:00:15.760 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getStatistics()
+2026-04-06 00:00:15.760 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getStatistics()
+2026-04-06 00:00:15.760 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getStatistics()
+2026-04-06 00:00:15.760 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:15.760 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getStatistics()
+2026-04-06 00:00:15.760 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getStatistics()
+2026-04-06 00:00:15.762 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:15.766 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getStatistics()
+2026-04-06 00:00:15.766 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:15.766 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getStatistics()
+2026-04-06 00:00:15.766 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:15.766 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getStatistics()
+2026-04-06 00:00:15.766 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getStatistics()
+2026-04-06 00:00:15.766 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getStatistics()
+2026-04-06 00:00:15.766 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:15.766 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getStatistics()
+2026-04-06 00:00:15.768 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:15.768 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/dashboard/statistics", parameters={}
+2026-04-06 00:00:15.768 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getStatistics()
+2026-04-06 00:00:15.769 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:15.770 [http-nio-8080-exec-4] INFO  com.example.student.common.aop.LogAspect - 接口请求: {"traceId":"6e1fd17ab367444d88b6bc1f809ef86f","args":"[]","method":"GET","ip":"0:0:0:0:0:0:0:1","function":"getStatistics","class":"com.example.student.controller.DashboardController","url":"http://localhost:8080/api/dashboard/statistics"}
+2026-04-06 00:00:15.770 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:15.772 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:15.822 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:15.823 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:15.889 [http-nio-8080-exec-4] INFO  com.example.student.common.aop.LogAspect - 接口响应: {"traceId":"6e1fd17ab367444d88b6bc1f809ef86f","result":{"code":200,"message":"操作成功","data":{"totalStudents":24,"totalTeachers":14,"totalCourses":20,"totalDepartments":6,"totalMajors":12,"totalClasses":10}}}
+2026-04-06 00:00:15.889 [http-nio-8080-exec-4] INFO  com.example.student.common.aop.LogAspect - 接口 [getStatistics] 执行时间: 120ms
+2026-04-06 00:00:15.890 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2026-04-06 00:00:15.890 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [Result(code=200, message=操作成功, data=StatisticsData(totalStudents=24, totalTeachers=14, totalCourses= (truncated)...]
+2026-04-06 00:00:15.892 [http-nio-8080-exec-4] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-04-06 00:00:15.892 [http-nio-8080-exec-4] INFO  c.example.student.filter.JwtAuthenticationFilter - 请求完成: GET /api/dashboard/statistics 状态码: 200
+2026-04-06 00:00:15.904 [http-nio-8080-exec-5] INFO  c.example.student.filter.JwtAuthenticationFilter - 处理请求: GET /api/dashboard/todo
+2026-04-06 00:00:15.904 [http-nio-8080-exec-5] INFO  c.example.student.filter.JwtAuthenticationFilter - 找到令牌: eyJhbGciOi...
+2026-04-06 00:00:15.909 [http-nio-8080-exec-5] INFO  c.example.student.filter.JwtAuthenticationFilter - 从令牌中提取用户名: teacher001
+2026-04-06 00:00:15.909 [http-nio-8080-exec-5] INFO  c.example.student.security.UserDetailsServiceImpl - 加载用户信息: teacher001
+2026-04-06 00:00:15.928 [http-nio-8080-exec-5] INFO  c.example.student.security.UserDetailsServiceImpl - 用户 teacher001 的权限列表: [education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar]
+2026-04-06 00:00:15.932 [http-nio-8080-exec-5] INFO  c.example.student.security.UserDetailsServiceImpl - 用户 teacher001 的角色列表: [teacher]
+2026-04-06 00:00:15.932 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:list
+2026-04-06 00:00:15.932 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: education:student:list
+2026-04-06 00:00:15.932 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: education:teacher:list
+2026-04-06 00:00:15.932 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:list
+2026-04-06 00:00:15.932 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: course:offering:list
+2026-04-06 00:00:15.932 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:list
+2026-04-06 00:00:15.932 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: course:teaching:list
+2026-04-06 00:00:15.932 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: grade:input
+2026-04-06 00:00:15.932 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: grade:query
+2026-04-06 00:00:15.932 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: grade:stats
+2026-04-06 00:00:15.932 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: system:notice:list
+2026-04-06 00:00:15.932 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: system:todo:list
+2026-04-06 00:00:15.932 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile
+2026-04-06 00:00:15.932 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:query
+2026-04-06 00:00:15.932 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:query
+2026-04-06 00:00:15.958 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:query
+2026-04-06 00:00:15.959 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:basic
+2026-04-06 00:00:15.959 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:charts
+2026-04-06 00:00:15.959 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:query
+2026-04-06 00:00:15.959 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:edit
+2026-04-06 00:00:15.959 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:avatar
+2026-04-06 00:00:15.959 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加角色: teacher
+2026-04-06 00:00:15.959 [http-nio-8080-exec-5] INFO  com.example.student.security.LoginUser - 用户 teacher001 的权限列表: [education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher]
+2026-04-06 00:00:15.960 [http-nio-8080-exec-5] INFO  c.example.student.filter.JwtAuthenticationFilter - 加载用户详情: teacher001, 权限: education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher
+2026-04-06 00:00:15.974 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:list
+2026-04-06 00:00:15.974 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: education:student:list
+2026-04-06 00:00:15.974 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: education:teacher:list
+2026-04-06 00:00:15.974 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:list
+2026-04-06 00:00:15.974 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: course:offering:list
+2026-04-06 00:00:15.974 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:list
+2026-04-06 00:00:15.974 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: course:teaching:list
+2026-04-06 00:00:15.974 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: grade:input
+2026-04-06 00:00:15.974 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: grade:query
+2026-04-06 00:00:15.974 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: grade:stats
+2026-04-06 00:00:15.974 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: system:notice:list
+2026-04-06 00:00:15.974 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: system:todo:list
+2026-04-06 00:00:15.974 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile
+2026-04-06 00:00:15.974 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:query
+2026-04-06 00:00:15.974 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:query
+2026-04-06 00:00:15.974 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:query
+2026-04-06 00:00:16.011 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:basic
+2026-04-06 00:00:16.011 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:charts
+2026-04-06 00:00:16.011 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:query
+2026-04-06 00:00:16.011 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:edit
+2026-04-06 00:00:16.011 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:avatar
+2026-04-06 00:00:16.011 [http-nio-8080-exec-5] DEBUG com.example.student.security.LoginUser - 添加角色: teacher
+2026-04-06 00:00:16.011 [http-nio-8080-exec-5] INFO  com.example.student.security.LoginUser - 用户 teacher001 的权限列表: [education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher]
+2026-04-06 00:00:16.011 [http-nio-8080-exec-5] INFO  c.example.student.filter.JwtAuthenticationFilter - 用户 teacher001 认证成功，权限: education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher
+2026-04-06 00:00:16.012 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getTodoList()
+2026-04-06 00:00:16.013 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getTodoList()
+2026-04-06 00:00:16.013 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getTodoList()
+2026-04-06 00:00:16.013 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getTodoList()
+2026-04-06 00:00:16.013 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getTodoList()
+2026-04-06 00:00:16.013 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getTodoList()
+2026-04-06 00:00:16.013 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getTodoList()
+2026-04-06 00:00:16.014 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getTodoList()
+2026-04-06 00:00:16.014 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getTodoList()
+2026-04-06 00:00:16.014 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getTodoList()
+2026-04-06 00:00:16.014 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getTodoList()
+2026-04-06 00:00:16.014 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getTodoList()
+2026-04-06 00:00:16.031 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getTodoList()
+2026-04-06 00:00:16.031 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getTodoList()
+2026-04-06 00:00:16.031 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getTodoList()
+2026-04-06 00:00:16.031 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getTodoList()
+2026-04-06 00:00:16.031 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getTodoList()
+2026-04-06 00:00:16.031 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getTodoList()
+2026-04-06 00:00:16.031 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getTodoList()
+2026-04-06 00:00:16.031 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getTodoList()
+2026-04-06 00:00:16.032 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getTodoList()
+2026-04-06 00:00:16.032 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getTodoList()
+2026-04-06 00:00:16.033 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getTodoList()
+2026-04-06 00:00:16.033 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/dashboard/todo", parameters={}
+2026-04-06 00:00:16.034 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getTodoList()
+2026-04-06 00:00:16.034 [http-nio-8080-exec-5] INFO  com.example.student.common.aop.LogAspect - 接口请求: {"traceId":"a0cd30fec9f140e7a9d934ab7140ffe2","args":"[]","method":"GET","ip":"0:0:0:0:0:0:0:1","function":"getTodoList","class":"com.example.student.controller.DashboardController","url":"http://localhost:8080/api/dashboard/todo"}
+2026-04-06 00:00:16.051 [http-nio-8080-exec-5] INFO  com.example.student.common.aop.LogAspect - 接口响应: {"traceId":"a0cd30fec9f140e7a9d934ab7140ffe2","result":{"code":200,"message":"操作成功","data":[{"id":4,"userId":3,"title":"备课-高等数学","content":"准备高等数学第一章的教学内容和课件","status":1,"dueDate":"2023-08-30T17:00:00","priority":2,"createTime":"2025-05-15T02:59:39","updateTime":"2025-05-15T02:59:39"},{"id":6,"userId":3,"title":"准备期中考试题目","content":"准备高等数学期中考试题目","status":0,"dueDate":"2023-10-20T17:00:00","priority":2,"createTime":"2025-05-15T02:59:39","updateTime":"2025-05-15T02:59:39"},{"id":5,"userId":3,"title":"批改作业-高等数学","content":"批改高等数学第一次作业","status":0,"dueDate":"2023-09-15T17:00:00","priority":1,"createTime":"2025-05-15T02:59:39","updateTime":"2025-05-15T02:59:39"}]}}
+2026-04-06 00:00:16.051 [http-nio-8080-exec-5] INFO  com.example.student.common.aop.LogAspect - 接口 [getTodoList] 执行时间: 17ms
+2026-04-06 00:00:16.053 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2026-04-06 00:00:16.063 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [Result(code=200, message=操作成功, data=[TodoItem(id=4, userId=3, title=备课-高等数学, content=准备高等数学第一章的教学内容和 (truncated)...]
+2026-04-06 00:00:16.064 [http-nio-8080-exec-5] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-04-06 00:00:16.065 [http-nio-8080-exec-5] INFO  c.example.student.filter.JwtAuthenticationFilter - 请求完成: GET /api/dashboard/todo 状态码: 200
+2026-04-06 00:00:16.078 [http-nio-8080-exec-3] INFO  c.example.student.filter.JwtAuthenticationFilter - 处理请求: GET /api/dashboard/notice
+2026-04-06 00:00:16.078 [http-nio-8080-exec-3] INFO  c.example.student.filter.JwtAuthenticationFilter - 找到令牌: eyJhbGciOi...
+2026-04-06 00:00:16.084 [http-nio-8080-exec-3] INFO  c.example.student.filter.JwtAuthenticationFilter - 从令牌中提取用户名: teacher001
+2026-04-06 00:00:16.084 [http-nio-8080-exec-3] INFO  c.example.student.security.UserDetailsServiceImpl - 加载用户信息: teacher001
+2026-04-06 00:00:16.095 [http-nio-8080-exec-3] INFO  c.example.student.security.UserDetailsServiceImpl - 用户 teacher001 的权限列表: [education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar]
+2026-04-06 00:00:16.100 [http-nio-8080-exec-3] INFO  c.example.student.security.UserDetailsServiceImpl - 用户 teacher001 的角色列表: [teacher]
+2026-04-06 00:00:16.100 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:list
+2026-04-06 00:00:16.100 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: education:student:list
+2026-04-06 00:00:16.100 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: education:teacher:list
+2026-04-06 00:00:16.100 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:list
+2026-04-06 00:00:16.100 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: course:offering:list
+2026-04-06 00:00:16.100 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:list
+2026-04-06 00:00:16.100 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: course:teaching:list
+2026-04-06 00:00:16.100 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: grade:input
+2026-04-06 00:00:16.100 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: grade:query
+2026-04-06 00:00:16.100 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: grade:stats
+2026-04-06 00:00:16.100 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: system:notice:list
+2026-04-06 00:00:16.105 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: system:todo:list
+2026-04-06 00:00:16.105 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile
+2026-04-06 00:00:16.105 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:query
+2026-04-06 00:00:16.105 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:query
+2026-04-06 00:00:16.105 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:query
+2026-04-06 00:00:16.106 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:basic
+2026-04-06 00:00:16.106 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:charts
+2026-04-06 00:00:16.106 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:query
+2026-04-06 00:00:16.106 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:edit
+2026-04-06 00:00:16.106 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:avatar
+2026-04-06 00:00:16.106 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加角色: teacher
+2026-04-06 00:00:16.106 [http-nio-8080-exec-3] INFO  com.example.student.security.LoginUser - 用户 teacher001 的权限列表: [education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher]
+2026-04-06 00:00:16.106 [http-nio-8080-exec-3] INFO  c.example.student.filter.JwtAuthenticationFilter - 加载用户详情: teacher001, 权限: education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher
+2026-04-06 00:00:16.116 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:list
+2026-04-06 00:00:16.116 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: education:student:list
+2026-04-06 00:00:16.116 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: education:teacher:list
+2026-04-06 00:00:16.116 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:list
+2026-04-06 00:00:16.116 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: course:offering:list
+2026-04-06 00:00:16.116 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:list
+2026-04-06 00:00:16.116 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: course:teaching:list
+2026-04-06 00:00:16.116 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: grade:input
+2026-04-06 00:00:16.116 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: grade:query
+2026-04-06 00:00:16.116 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: grade:stats
+2026-04-06 00:00:16.116 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: system:notice:list
+2026-04-06 00:00:16.143 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: system:todo:list
+2026-04-06 00:00:16.143 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile
+2026-04-06 00:00:16.143 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:query
+2026-04-06 00:00:16.143 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:query
+2026-04-06 00:00:16.143 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:query
+2026-04-06 00:00:16.143 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:basic
+2026-04-06 00:00:16.143 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:charts
+2026-04-06 00:00:16.143 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:query
+2026-04-06 00:00:16.143 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:edit
+2026-04-06 00:00:16.143 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:avatar
+2026-04-06 00:00:16.143 [http-nio-8080-exec-3] DEBUG com.example.student.security.LoginUser - 添加角色: teacher
+2026-04-06 00:00:16.143 [http-nio-8080-exec-3] INFO  com.example.student.security.LoginUser - 用户 teacher001 的权限列表: [education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher]
+2026-04-06 00:00:16.143 [http-nio-8080-exec-3] INFO  c.example.student.filter.JwtAuthenticationFilter - 用户 teacher001 认证成功，权限: education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher
+2026-04-06 00:00:16.144 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getNoticeList()
+2026-04-06 00:00:16.145 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getNoticeList()
+2026-04-06 00:00:16.145 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getNoticeList()
+2026-04-06 00:00:16.145 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getNoticeList()
+2026-04-06 00:00:16.145 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getNoticeList()
+2026-04-06 00:00:16.145 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getNoticeList()
+2026-04-06 00:00:16.145 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getNoticeList()
+2026-04-06 00:00:16.146 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getNoticeList()
+2026-04-06 00:00:16.147 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getNoticeList()
+2026-04-06 00:00:16.181 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getNoticeList()
+2026-04-06 00:00:16.181 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getNoticeList()
+2026-04-06 00:00:16.181 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getNoticeList()
+2026-04-06 00:00:16.181 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getNoticeList()
+2026-04-06 00:00:16.181 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getNoticeList()
+2026-04-06 00:00:16.182 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getNoticeList()
+2026-04-06 00:00:16.182 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getNoticeList()
+2026-04-06 00:00:16.182 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getNoticeList()
+2026-04-06 00:00:16.182 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getNoticeList()
+2026-04-06 00:00:16.182 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getNoticeList()
+2026-04-06 00:00:16.182 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getNoticeList()
+2026-04-06 00:00:16.182 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getNoticeList()
+2026-04-06 00:00:16.182 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getNoticeList()
+2026-04-06 00:00:16.182 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getNoticeList()
+2026-04-06 00:00:16.182 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/dashboard/notice", parameters={}
+2026-04-06 00:00:16.182 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DashboardController#getNoticeList()
+2026-04-06 00:00:16.184 [http-nio-8080-exec-3] INFO  com.example.student.common.aop.LogAspect - 接口请求: {"traceId":"75dbf199a60b4b179594f09a8c9ea6b6","args":"[]","method":"GET","ip":"0:0:0:0:0:0:0:1","function":"getNoticeList","class":"com.example.student.controller.DashboardController","url":"http://localhost:8080/api/dashboard/notice"}
+2026-04-06 00:00:16.226 [http-nio-8080-exec-3] INFO  com.example.student.common.aop.LogAspect - 接口响应: {"traceId":"75dbf199a60b4b179594f09a8c9ea6b6","result":{"code":200,"message":"操作成功","data":[{"id":9,"title":"校园网络升级维护通知","content":"各位师生：\n\n校园网络将于2024年3月10日凌晨00:00至06:00进行升级维护，期间校园网络将暂时无法使用。\n\n给各位带来的不便，敬请谅解。","type":0,"status":1,"publishTime":"2024-03-05T14:20:00","publisherId":1,"publisherName":"信息中心","createTime":"2025-05-15T02:59:39","updateTime":"2025-05-15T02:59:39"},{"id":7,"title":"2023-2024学年第二学期选课通知","content":"各位同学：\n\n2023-2024学年第二学期选课系统将于2024年1月20日上午10:00开放，请各位同学在规定时间内完成选课。\n\n选课系统网址：http://xk.example.edu.cn","type":0,"status":1,"publishTime":"2024-01-15T10:30:00","publisherId":1,"publisherName":"教务处","createTime":"2025-05-15T02:59:39","updateTime":"2025-05-15T02:59:39"},{"id":8,"title":"2024年寒假放假安排","content":"各位师生：\n\n2024年寒假放假时间为2024年1月22日至2024年2月25日，共35天。2024年春季学期将于2024年2月26日开始。\n\n请各位同学提前安排好行程，按时返校。","type":1,"status":1,"publishTime":"2024-01-10T09:45:00","publisherId":1,"publisherName":"校长办公室","createTime":"2025-05-15T02:59:39","updateTime":"2025-05-15T02:59:39"},{"id":5,"title":"期中考试安排通知","content":"各位同学：\n\n2023-2024学年第一学期期中考试将于第9周进行，具体考试科目和时间安排请关注教务系统通知。\n\n请各位同学合理安排时间，认真复习备考。","type":1,"status":1,"publishTime":"2023-10-15T15:45:00","publisherId":1,"publisherName":"教务处","createTime":"2025-05-15T02:59:39","updateTime":"2025-05-15T02:59:39"},{"id":6,"title":"图书馆开放时间调整通知","content":"各位师生：\n\n自2023年10月15日起，图书馆开放时间调整为：周一至周五 8:00-22:00，周六、周日 9:00-21:00。\n\n特此通知。","type":0,"status":1,"publishTime":"2023-10-10T16:20:00","publisherId":1,"publisherName":"图书馆","createTime":"2025-05-15T02:59:39","updateTime":"2025-05-15T02:59:39"},{"id":4,"title":"2023年国庆节放假安排","content":"各位师生：\n\n根据国家法定节假日安排，2023年国庆节放假时间为10月1日至10月7日，共7天。9月30日（星期六）正常上课，10月8日（星期日）正常上课。","type":1,"status":1,"publishTime":"2023-09-25T11:30:00","publisherId":1,"publisherName":"校长办公室","createTime":"2025-05-15T02:59:39","updateTime":"2025-05-15T02:59:39"},{"id":3,"title":"教学楼B区装修通知","content":"各位师生：\n\n教学楼B区将于2023年10月1日至10月7日进行装修，期间B区所有教室暂停使用。原定在B区上课的课程将临时调整到A区和C区，具体安排请关注教务系统通知。","type":0,"status":1,"publishTime":"2023-09-20T09:15:00","publisherId":1,"publisherName":"后勤处","createTime":"2025-05-15T02:59:39","updateTime":"2025-05-15T02:59:39"},{"id":2,"title":"选课系统开放通知","content":"各位同学：\n\n2023-2024学年第一学期选课系统将于2023年8月25日上午10:00开放，请各位同学在规定时间内完成选课。\n\n选课系统网址：http://xk.example.edu.cn","type":0,"status":1,"publishTime":"2023-08-20T14:30:00","publisherId":1,"publisherName":"教务处","createTime":"2025-05-15T02:59:39","updateTime":"2025-05-15T02:59:39"},{"id":1,"title":"2023-2024学年第一学期开学通知","content":"各位同学：\n\n2023-2024学年第一学期将于2023年9月1日正式开始，请各位同学按时返校。新生报到时间为8月28日，老生报到时间为8月30日。\n\n请各位同学提前安排好行程，准时返校。","type":1,"status":1,"publishTime":"2023-08-15T10:00:00","publisherId":1,"publisherName":"教务处","createTime":"2025-05-15T02:59:39","updateTime":"2025-05-15T02:59:39"}]}}
+2026-04-06 00:00:16.247 [http-nio-8080-exec-3] INFO  com.example.student.common.aop.LogAspect - 接口 [getNoticeList] 执行时间: 63ms
+2026-04-06 00:00:16.247 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2026-04-06 00:00:16.247 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [Result(code=200, message=操作成功, data=[Notice(id=9, title=校园网络升级维护通知, content=各位师生：<EOL><EOL>校园网络将于2024年3月10日凌 (truncated)...]
+2026-04-06 00:00:16.250 [http-nio-8080-exec-3] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-04-06 00:00:16.250 [http-nio-8080-exec-3] INFO  c.example.student.filter.JwtAuthenticationFilter - 请求完成: GET /api/dashboard/notice 状态码: 200
+2026-04-06 00:00:20.061 [http-nio-8080-exec-10] INFO  c.example.student.filter.JwtAuthenticationFilter - 处理请求: GET /api/education/department/all
+2026-04-06 00:00:20.061 [http-nio-8080-exec-10] INFO  c.example.student.filter.JwtAuthenticationFilter - 找到令牌: eyJhbGciOi...
+2026-04-06 00:00:20.063 [http-nio-8080-exec-10] INFO  c.example.student.filter.JwtAuthenticationFilter - 从令牌中提取用户名: teacher001
+2026-04-06 00:00:20.064 [http-nio-8080-exec-10] INFO  c.example.student.security.UserDetailsServiceImpl - 加载用户信息: teacher001
+2026-04-06 00:00:20.071 [http-nio-8080-exec-10] INFO  c.example.student.security.UserDetailsServiceImpl - 用户 teacher001 的权限列表: [education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar]
+2026-04-06 00:00:20.075 [http-nio-8080-exec-10] INFO  c.example.student.security.UserDetailsServiceImpl - 用户 teacher001 的角色列表: [teacher]
+2026-04-06 00:00:20.075 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:list
+2026-04-06 00:00:20.075 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: education:student:list
+2026-04-06 00:00:20.075 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: education:teacher:list
+2026-04-06 00:00:20.077 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:list
+2026-04-06 00:00:20.077 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: course:offering:list
+2026-04-06 00:00:20.077 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:list
+2026-04-06 00:00:20.077 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: course:teaching:list
+2026-04-06 00:00:20.077 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: grade:input
+2026-04-06 00:00:20.077 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: grade:query
+2026-04-06 00:00:20.077 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: grade:stats
+2026-04-06 00:00:20.077 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: system:notice:list
+2026-04-06 00:00:20.077 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: system:todo:list
+2026-04-06 00:00:20.077 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile
+2026-04-06 00:00:20.077 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:query
+2026-04-06 00:00:20.077 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:query
+2026-04-06 00:00:20.077 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:query
+2026-04-06 00:00:20.077 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:basic
+2026-04-06 00:00:20.077 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:charts
+2026-04-06 00:00:20.077 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:query
+2026-04-06 00:00:20.077 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:edit
+2026-04-06 00:00:20.077 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:avatar
+2026-04-06 00:00:20.077 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加角色: teacher
+2026-04-06 00:00:20.077 [http-nio-8080-exec-10] INFO  com.example.student.security.LoginUser - 用户 teacher001 的权限列表: [education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher]
+2026-04-06 00:00:20.077 [http-nio-8080-exec-10] INFO  c.example.student.filter.JwtAuthenticationFilter - 加载用户详情: teacher001, 权限: education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher
+2026-04-06 00:00:20.085 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:list
+2026-04-06 00:00:20.086 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: education:student:list
+2026-04-06 00:00:20.086 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: education:teacher:list
+2026-04-06 00:00:20.086 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:list
+2026-04-06 00:00:20.086 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: course:offering:list
+2026-04-06 00:00:20.086 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:list
+2026-04-06 00:00:20.086 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: course:teaching:list
+2026-04-06 00:00:20.086 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: grade:input
+2026-04-06 00:00:20.086 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: grade:query
+2026-04-06 00:00:20.086 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: grade:stats
+2026-04-06 00:00:20.086 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: system:notice:list
+2026-04-06 00:00:20.086 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: system:todo:list
+2026-04-06 00:00:20.086 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile
+2026-04-06 00:00:20.086 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:query
+2026-04-06 00:00:20.087 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:query
+2026-04-06 00:00:20.087 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:query
+2026-04-06 00:00:20.087 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:basic
+2026-04-06 00:00:20.087 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:charts
+2026-04-06 00:00:20.087 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:query
+2026-04-06 00:00:20.087 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:edit
+2026-04-06 00:00:20.087 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:avatar
+2026-04-06 00:00:20.087 [http-nio-8080-exec-10] DEBUG com.example.student.security.LoginUser - 添加角色: teacher
+2026-04-06 00:00:20.087 [http-nio-8080-exec-10] INFO  com.example.student.security.LoginUser - 用户 teacher001 的权限列表: [education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher]
+2026-04-06 00:00:20.087 [http-nio-8080-exec-10] INFO  c.example.student.filter.JwtAuthenticationFilter - 用户 teacher001 认证成功，权限: education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher
+2026-04-06 00:00:20.087 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DepartmentController#getAllDepartments()
+2026-04-06 00:00:20.088 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DepartmentController#getAllDepartments()
+2026-04-06 00:00:20.088 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DepartmentController#getAllDepartments()
+2026-04-06 00:00:20.088 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DepartmentController#getAllDepartments()
+2026-04-06 00:00:20.088 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DepartmentController#getAllDepartments()
+2026-04-06 00:00:20.090 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DepartmentController#getAllDepartments()
+2026-04-06 00:00:20.090 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DepartmentController#getAllDepartments()
+2026-04-06 00:00:20.090 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DepartmentController#getAllDepartments()
+2026-04-06 00:00:20.091 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DepartmentController#getAllDepartments()
+2026-04-06 00:00:20.091 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DepartmentController#getAllDepartments()
+2026-04-06 00:00:20.094 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DepartmentController#getAllDepartments()
+2026-04-06 00:00:20.095 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DepartmentController#getAllDepartments()
+2026-04-06 00:00:20.095 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DepartmentController#getAllDepartments()
+2026-04-06 00:00:20.095 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DepartmentController#getAllDepartments()
+2026-04-06 00:00:20.095 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DepartmentController#getAllDepartments()
+2026-04-06 00:00:20.095 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DepartmentController#getAllDepartments()
+2026-04-06 00:00:20.095 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DepartmentController#getAllDepartments()
+2026-04-06 00:00:20.095 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DepartmentController#getAllDepartments()
+2026-04-06 00:00:20.095 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DepartmentController#getAllDepartments()
+2026-04-06 00:00:20.095 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DepartmentController#getAllDepartments()
+2026-04-06 00:00:20.095 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DepartmentController#getAllDepartments()
+2026-04-06 00:00:20.095 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DepartmentController#getAllDepartments()
+2026-04-06 00:00:20.095 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DepartmentController#getAllDepartments()
+2026-04-06 00:00:20.095 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/education/department/all", parameters={}
+2026-04-06 00:00:20.096 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.DepartmentController#getAllDepartments()
+2026-04-06 00:00:20.096 [http-nio-8080-exec-10] INFO  com.example.student.common.aop.LogAspect - 接口请求: {"traceId":"4eb7f881f0fd4fbeab0e3d6972ca635a","args":"[]","method":"GET","ip":"0:0:0:0:0:0:0:1","function":"getAllDepartments","class":"com.example.student.controller.DepartmentController","url":"http://localhost:8080/api/education/department/all"}
+2026-04-06 00:00:20.114 [http-nio-8080-exec-10] INFO  com.example.student.common.aop.LogAspect - 接口响应: {"traceId":"4eb7f881f0fd4fbeab0e3d6972ca635a","result":{"code":200,"message":"操作成功","data":[{"id":1,"name":"计算机科学与技术学院","code":"CS","description":"专注于计算机科学与技术领域的教学和研究","createTime":"2025-05-15T02:59:39","updateTime":"2025-05-15T02:59:39"},{"id":6,"name":"院系6","code":"DEPT6","description":"自动创建的院系6","createTime":"2025-10-15T22:21:33","updateTime":"2025-10-15T22:21:33"},{"id":4,"name":"经济管理学院","code":"EM","description":"专注于经济学和管理学的教学和研究","createTime":"2025-05-15T02:59:39","updateTime":"2025-05-15T02:59:39"},{"id":3,"name":"外国语学院","code":"FL","description":"专注于外国语言文学的教学和研究","createTime":"2025-05-15T02:59:39","updateTime":"2025-05-15T02:59:39"},{"id":2,"name":"数学与统计学院","code":"MATH","description":"专注于数学和统计学的教学和研究","createTime":"2025-05-15T02:59:39","updateTime":"2025-05-15T02:59:39"},{"id":5,"name":"物理与电子工程学院","code":"PE","description":"专注于物理学和电子工程的教学和研究","createTime":"2025-05-15T02:59:39","updateTime":"2025-05-15T02:59:39"}]}}
+2026-04-06 00:00:20.114 [http-nio-8080-exec-10] INFO  com.example.student.common.aop.LogAspect - 接口 [getAllDepartments] 执行时间: 18ms
+2026-04-06 00:00:20.114 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2026-04-06 00:00:20.118 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [Result(code=200, message=操作成功, data=[Department(id=1, name=计算机科学与技术学院, code=CS, description=专注于计算机科学 (truncated)...]
+2026-04-06 00:00:20.120 [http-nio-8080-exec-10] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-04-06 00:00:20.120 [http-nio-8080-exec-10] INFO  c.example.student.filter.JwtAuthenticationFilter - 请求完成: GET /api/education/department/all 状态码: 200
+2026-04-06 00:00:20.138 [http-nio-8080-exec-7] INFO  c.example.student.filter.JwtAuthenticationFilter - 处理请求: GET /api/course/teacher/courses
+2026-04-06 00:00:20.138 [http-nio-8080-exec-7] INFO  c.example.student.filter.JwtAuthenticationFilter - 找到令牌: eyJhbGciOi...
+2026-04-06 00:00:20.145 [http-nio-8080-exec-7] INFO  c.example.student.filter.JwtAuthenticationFilter - 从令牌中提取用户名: teacher001
+2026-04-06 00:00:20.145 [http-nio-8080-exec-7] INFO  c.example.student.security.UserDetailsServiceImpl - 加载用户信息: teacher001
+2026-04-06 00:00:20.158 [http-nio-8080-exec-7] INFO  c.example.student.security.UserDetailsServiceImpl - 用户 teacher001 的权限列表: [education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar]
+2026-04-06 00:00:20.162 [http-nio-8080-exec-7] INFO  c.example.student.security.UserDetailsServiceImpl - 用户 teacher001 的角色列表: [teacher]
+2026-04-06 00:00:20.162 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:list
+2026-04-06 00:00:20.162 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: education:student:list
+2026-04-06 00:00:20.162 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: education:teacher:list
+2026-04-06 00:00:20.162 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:list
+2026-04-06 00:00:20.162 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: course:offering:list
+2026-04-06 00:00:20.162 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:list
+2026-04-06 00:00:20.162 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: course:teaching:list
+2026-04-06 00:00:20.162 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: grade:input
+2026-04-06 00:00:20.162 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: grade:query
+2026-04-06 00:00:20.162 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: grade:stats
+2026-04-06 00:00:20.162 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: system:notice:list
+2026-04-06 00:00:20.162 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: system:todo:list
+2026-04-06 00:00:20.162 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile
+2026-04-06 00:00:20.162 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:query
+2026-04-06 00:00:20.162 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:query
+2026-04-06 00:00:20.162 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:query
+2026-04-06 00:00:20.162 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:basic
+2026-04-06 00:00:20.162 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:charts
+2026-04-06 00:00:20.162 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:query
+2026-04-06 00:00:20.162 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:edit
+2026-04-06 00:00:20.162 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:avatar
+2026-04-06 00:00:20.162 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加角色: teacher
+2026-04-06 00:00:20.162 [http-nio-8080-exec-7] INFO  com.example.student.security.LoginUser - 用户 teacher001 的权限列表: [education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher]
+2026-04-06 00:00:20.162 [http-nio-8080-exec-7] INFO  c.example.student.filter.JwtAuthenticationFilter - 加载用户详情: teacher001, 权限: education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher
+2026-04-06 00:00:20.173 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:list
+2026-04-06 00:00:20.173 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: education:student:list
+2026-04-06 00:00:20.173 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: education:teacher:list
+2026-04-06 00:00:20.173 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:list
+2026-04-06 00:00:20.173 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: course:offering:list
+2026-04-06 00:00:20.173 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:list
+2026-04-06 00:00:20.173 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: course:teaching:list
+2026-04-06 00:00:20.173 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: grade:input
+2026-04-06 00:00:20.173 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: grade:query
+2026-04-06 00:00:20.173 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: grade:stats
+2026-04-06 00:00:20.173 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: system:notice:list
+2026-04-06 00:00:20.173 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: system:todo:list
+2026-04-06 00:00:20.175 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile
+2026-04-06 00:00:20.175 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:query
+2026-04-06 00:00:20.175 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:query
+2026-04-06 00:00:20.175 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:query
+2026-04-06 00:00:20.175 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:basic
+2026-04-06 00:00:20.175 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:charts
+2026-04-06 00:00:20.175 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:query
+2026-04-06 00:00:20.175 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:edit
+2026-04-06 00:00:20.175 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:avatar
+2026-04-06 00:00:20.175 [http-nio-8080-exec-7] DEBUG com.example.student.security.LoginUser - 添加角色: teacher
+2026-04-06 00:00:20.175 [http-nio-8080-exec-7] INFO  com.example.student.security.LoginUser - 用户 teacher001 的权限列表: [education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher]
+2026-04-06 00:00:20.175 [http-nio-8080-exec-7] INFO  c.example.student.filter.JwtAuthenticationFilter - 用户 teacher001 认证成功，权限: education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher
+2026-04-06 00:00:20.175 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.CourseController#getTeacherCourses(CourseQueryDTO)
+2026-04-06 00:00:20.175 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.CourseController#getTeacherCourses(CourseQueryDTO)
+2026-04-06 00:00:20.175 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.CourseController#getTeacherCourses(CourseQueryDTO)
+2026-04-06 00:00:20.175 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.CourseController#getTeacherCourses(CourseQueryDTO)
+2026-04-06 00:00:20.175 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.CourseController#getTeacherCourses(CourseQueryDTO)
+2026-04-06 00:00:20.175 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.CourseController#getTeacherCourses(CourseQueryDTO)
+2026-04-06 00:00:20.175 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.CourseController#getTeacherCourses(CourseQueryDTO)
+2026-04-06 00:00:20.175 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.CourseController#getTeacherCourses(CourseQueryDTO)
+2026-04-06 00:00:20.175 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.CourseController#getTeacherCourses(CourseQueryDTO)
+2026-04-06 00:00:20.178 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.CourseController#getTeacherCourses(CourseQueryDTO)
+2026-04-06 00:00:20.178 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.CourseController#getTeacherCourses(CourseQueryDTO)
+2026-04-06 00:00:20.178 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.CourseController#getTeacherCourses(CourseQueryDTO)
+2026-04-06 00:00:20.179 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.CourseController#getTeacherCourses(CourseQueryDTO)
+2026-04-06 00:00:20.179 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.CourseController#getTeacherCourses(CourseQueryDTO)
+2026-04-06 00:00:20.179 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.CourseController#getTeacherCourses(CourseQueryDTO)
+2026-04-06 00:00:20.179 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.CourseController#getTeacherCourses(CourseQueryDTO)
+2026-04-06 00:00:20.179 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.CourseController#getTeacherCourses(CourseQueryDTO)
+2026-04-06 00:00:20.179 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.CourseController#getTeacherCourses(CourseQueryDTO)
+2026-04-06 00:00:20.179 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.CourseController#getTeacherCourses(CourseQueryDTO)
+2026-04-06 00:00:20.179 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.CourseController#getTeacherCourses(CourseQueryDTO)
+2026-04-06 00:00:20.181 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.CourseController#getTeacherCourses(CourseQueryDTO)
+2026-04-06 00:00:20.181 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.CourseController#getTeacherCourses(CourseQueryDTO)
+2026-04-06 00:00:20.181 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.CourseController#getTeacherCourses(CourseQueryDTO)
+2026-04-06 00:00:20.181 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/course/teacher/courses?pageNum=1&pageSize=10&code=&name=", parameters={masked}
+2026-04-06 00:00:20.181 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.student.controller.CourseController#getTeacherCourses(CourseQueryDTO)
+2026-04-06 00:00:20.184 [http-nio-8080-exec-7] INFO  com.example.student.common.aop.LogAspect - 接口请求: {"traceId":"3579fce1a427482a9e326bc0d97433cf","args":"[CourseQueryDTO(code=, name=, type=null, departmentId=null, creditMin=null, creditMax=null, hoursMin=null, hoursMax=null)]","method":"GET","ip":"0:0:0:0:0:0:0:1","function":"getTeacherCourses","class":"com.example.student.controller.CourseController","url":"http://localhost:8080/api/course/teacher/courses"}
+2026-04-06 00:00:20.205 [http-nio-8080-exec-7] INFO  com.example.student.common.aop.LogAspect - 接口响应: {"traceId":"3579fce1a427482a9e326bc0d97433cf","result":{"code":200,"message":"操作成功","data":{"rows":[{"id":4,"code":"CS101","name":"程序设计基础(Java)","type":0,"credit":4.0,"hours":64,"description":"Java语言程序设计入门课程","departmentId":1,"createTime":"2025-05-15T02:59:39","updateTime":"2025-05-15T02:59:39","teacherId":null,"teacherName":null,"teacherContact":null,"semester":null,"classTime":null,"location":null,"status":null,"statusDesc":null,"capacity":null,"selectedCount":null,"departmentName":null,"assessmentMethod":null},{"id":5,"code":"CS201","name":"数据结构与算法","type":0,"credit":4.0,"hours":64,"description":"数据结构与算法设计基础课程","departmentId":1,"createTime":"2025-05-15T02:59:39","updateTime":"2025-05-15T02:59:39","teacherId":null,"teacherName":null,"teacherContact":null,"semester":null,"classTime":null,"location":null,"status":null,"statusDesc":null,"capacity":null,"selectedCount":null,"departmentName":null,"assessmentMethod":null},{"id":8,"code":"CS303","name":"计算机网络","type":0,"credit":3.5,"hours":56,"description":"计算机网络基础理论课程","departmentId":1,"createTime":"2025-05-15T02:59:39","updateTime":"2025-05-15T02:59:39","teacherId":null,"teacherName":null,"teacherContact":null,"semester":null,"classTime":null,"location":null,"status":null,"statusDesc":null,"capacity":null,"selectedCount":null,"departmentName":null,"assessmentMethod":null}],"total":3,"pageNum":1,"pageSize":10,"list":[{"id":4,"code":"CS101","name":"程序设计基础(Java)","type":0,"credit":4.0,"hours":64,"description":"Java语言程序设计入门课程","departmentId":1,"createTime":"2025-05-15T02:59:39","updateTime":"2025-05-15T02:59:39","teacherId":null,"teacherName":null,"teacherContact":null,"semester":null,"classTime":null,"location":null,"status":null,"statusDesc":null,"capacity":null,"selectedCount":null,"departmentName":null,"assessmentMethod":null},{"id":5,"code":"CS201","name":"数据结构与算法","type":0,"credit":4.0,"hours":64,"description":"数据结构与算法设计基础课程","departmentId":1,"createTime":"2025-05-15T02:59:39","updateTime":"2025-05-15T02:59:39","teacherId":null,"teacherName":null,"teacherContact":null,"semester":null,"classTime":null,"location":null,"status":null,"statusDesc":null,"capacity":null,"selectedCount":null,"departmentName":null,"assessmentMethod":null},{"id":8,"code":"CS303","name":"计算机网络","type":0,"credit":3.5,"hours":56,"description":"计算机网络基础理论课程","departmentId":1,"createTime":"2025-05-15T02:59:39","updateTime":"2025-05-15T02:59:39","teacherId":null,"teacherName":null,"teacherContact":null,"semester":null,"classTime":null,"location":null,"status":null,"statusDesc":null,"capacity":null,"selectedCount":null,"departmentName":null,"assessmentMethod":null}]}}}
+2026-04-06 00:00:20.211 [http-nio-8080-exec-7] INFO  com.example.student.common.aop.LogAspect - 接口 [getTeacherCourses] 执行时间: 28ms
+2026-04-06 00:00:20.211 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2026-04-06 00:00:20.211 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [Result(code=200, message=操作成功, data=PageResult(rows=[Course(id=4, code=CS101, name=程序设计基础(Java), typ (truncated)...]
+2026-04-06 00:00:20.220 [http-nio-8080-exec-7] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2026-04-06 00:00:20.220 [http-nio-8080-exec-7] INFO  c.example.student.filter.JwtAuthenticationFilter - 请求完成: GET /api/course/teacher/courses 状态码: 200
+2026-04-06 00:00:21.247 [http-nio-8080-exec-8] INFO  c.example.student.filter.JwtAuthenticationFilter - 处理请求: GET /api/course/material/list/4
+2026-04-06 00:00:21.247 [http-nio-8080-exec-8] INFO  c.example.student.filter.JwtAuthenticationFilter - 找到令牌: eyJhbGciOi...
+2026-04-06 00:00:21.251 [http-nio-8080-exec-8] INFO  c.example.student.filter.JwtAuthenticationFilter - 从令牌中提取用户名: teacher001
+2026-04-06 00:00:21.251 [http-nio-8080-exec-8] INFO  c.example.student.security.UserDetailsServiceImpl - 加载用户信息: teacher001
+2026-04-06 00:00:21.263 [http-nio-8080-exec-8] INFO  c.example.student.security.UserDetailsServiceImpl - 用户 teacher001 的权限列表: [education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar]
+2026-04-06 00:00:21.266 [http-nio-8080-exec-8] INFO  c.example.student.security.UserDetailsServiceImpl - 用户 teacher001 的角色列表: [teacher]
+2026-04-06 00:00:21.266 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:list
+2026-04-06 00:00:21.266 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: education:student:list
+2026-04-06 00:00:21.266 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: education:teacher:list
+2026-04-06 00:00:21.266 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:list
+2026-04-06 00:00:21.267 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: course:offering:list
+2026-04-06 00:00:21.267 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:list
+2026-04-06 00:00:21.267 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: course:teaching:list
+2026-04-06 00:00:21.267 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: grade:input
+2026-04-06 00:00:21.267 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: grade:query
+2026-04-06 00:00:21.267 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: grade:stats
+2026-04-06 00:00:21.267 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: system:notice:list
+2026-04-06 00:00:21.267 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: system:todo:list
+2026-04-06 00:00:21.267 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile
+2026-04-06 00:00:21.267 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:query
+2026-04-06 00:00:21.267 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:query
+2026-04-06 00:00:21.267 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:query
+2026-04-06 00:00:21.267 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:basic
+2026-04-06 00:00:21.267 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:charts
+2026-04-06 00:00:21.267 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:query
+2026-04-06 00:00:21.267 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:edit
+2026-04-06 00:00:21.267 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:avatar
+2026-04-06 00:00:21.267 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加角色: teacher
+2026-04-06 00:00:21.267 [http-nio-8080-exec-8] INFO  com.example.student.security.LoginUser - 用户 teacher001 的权限列表: [education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher]
+2026-04-06 00:00:21.267 [http-nio-8080-exec-8] INFO  c.example.student.filter.JwtAuthenticationFilter - 加载用户详情: teacher001, 权限: education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher
+2026-04-06 00:00:21.280 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:list
+2026-04-06 00:00:21.280 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: education:student:list
+2026-04-06 00:00:21.280 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: education:teacher:list
+2026-04-06 00:00:21.280 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:list
+2026-04-06 00:00:21.280 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: course:offering:list
+2026-04-06 00:00:21.281 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:list
+2026-04-06 00:00:21.281 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: course:teaching:list
+2026-04-06 00:00:21.281 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: grade:input
+2026-04-06 00:00:21.281 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: grade:query
+2026-04-06 00:00:21.281 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: grade:stats
+2026-04-06 00:00:21.281 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: system:notice:list
+2026-04-06 00:00:21.281 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: system:todo:list
+2026-04-06 00:00:21.282 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile
+2026-04-06 00:00:21.282 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:query
+2026-04-06 00:00:21.282 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:query
+2026-04-06 00:00:21.282 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:query
+2026-04-06 00:00:21.282 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:basic
+2026-04-06 00:00:21.282 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:charts
+2026-04-06 00:00:21.282 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:query
+2026-04-06 00:00:21.282 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:edit
+2026-04-06 00:00:21.282 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:avatar
+2026-04-06 00:00:21.282 [http-nio-8080-exec-8] DEBUG com.example.student.security.LoginUser - 添加角色: teacher
+2026-04-06 00:00:21.282 [http-nio-8080-exec-8] INFO  com.example.student.security.LoginUser - 用户 teacher001 的权限列表: [education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher]
+2026-04-06 00:00:21.283 [http-nio-8080-exec-8] INFO  c.example.student.filter.JwtAuthenticationFilter - 用户 teacher001 认证成功，权限: education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher
+2026-04-06 00:00:21.286 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:21.288 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:21.291 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:21.294 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:21.295 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:21.298 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:21.301 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:21.304 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:21.307 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:21.310 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:21.312 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:21.317 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:21.318 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:21.321 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:21.323 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:21.325 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:21.327 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:21.328 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:21.329 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:21.332 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:21.334 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:21.336 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:21.339 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:21.341 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/course/material/list/4", parameters={}
+2026-04-06 00:00:21.344 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:21.354 [http-nio-8080-exec-8] DEBUG o.s.w.servlet.resource.ResourceHttpRequestHandler - Resource not found
+2026-04-06 00:00:21.354 [http-nio-8080-exec-8] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2026-04-06 00:00:21.354 [http-nio-8080-exec-8] INFO  c.example.student.filter.JwtAuthenticationFilter - 请求完成: GET /api/course/material/list/4 状态码: 404
+2026-04-06 00:00:21.355 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:21.356 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:21.356 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:21.357 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:21.357 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:21.357 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:21.357 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:21.357 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:21.357 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:21.358 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:21.358 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:21.358 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:21.358 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:21.358 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:21.358 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:21.358 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:21.358 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:21.358 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:21.358 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:21.358 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:21.358 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:21.358 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:21.358 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:26.387 [http-nio-8080-exec-9] INFO  c.example.student.filter.JwtAuthenticationFilter - 处理请求: GET /api/course/material/list/4
+2026-04-06 00:00:26.387 [http-nio-8080-exec-9] INFO  c.example.student.filter.JwtAuthenticationFilter - 找到令牌: eyJhbGciOi...
+2026-04-06 00:00:26.409 [http-nio-8080-exec-9] INFO  c.example.student.filter.JwtAuthenticationFilter - 从令牌中提取用户名: teacher001
+2026-04-06 00:00:26.409 [http-nio-8080-exec-9] INFO  c.example.student.security.UserDetailsServiceImpl - 加载用户信息: teacher001
+2026-04-06 00:00:26.435 [http-nio-8080-exec-9] INFO  c.example.student.security.UserDetailsServiceImpl - 用户 teacher001 的权限列表: [education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar]
+2026-04-06 00:00:26.440 [http-nio-8080-exec-9] INFO  c.example.student.security.UserDetailsServiceImpl - 用户 teacher001 的角色列表: [teacher]
+2026-04-06 00:00:26.441 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:list
+2026-04-06 00:00:26.441 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: education:student:list
+2026-04-06 00:00:26.441 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: education:teacher:list
+2026-04-06 00:00:26.441 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:list
+2026-04-06 00:00:26.441 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: course:offering:list
+2026-04-06 00:00:26.441 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:list
+2026-04-06 00:00:26.441 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: course:teaching:list
+2026-04-06 00:00:26.441 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: grade:input
+2026-04-06 00:00:26.441 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: grade:query
+2026-04-06 00:00:26.441 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: grade:stats
+2026-04-06 00:00:26.441 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: system:notice:list
+2026-04-06 00:00:26.441 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: system:todo:list
+2026-04-06 00:00:26.441 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile
+2026-04-06 00:00:26.441 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:query
+2026-04-06 00:00:26.441 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:query
+2026-04-06 00:00:26.441 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:query
+2026-04-06 00:00:26.441 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:basic
+2026-04-06 00:00:26.441 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:charts
+2026-04-06 00:00:26.441 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:query
+2026-04-06 00:00:26.441 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:edit
+2026-04-06 00:00:26.441 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:avatar
+2026-04-06 00:00:26.441 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加角色: teacher
+2026-04-06 00:00:26.441 [http-nio-8080-exec-9] INFO  com.example.student.security.LoginUser - 用户 teacher001 的权限列表: [education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher]
+2026-04-06 00:00:26.441 [http-nio-8080-exec-9] INFO  c.example.student.filter.JwtAuthenticationFilter - 加载用户详情: teacher001, 权限: education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher
+2026-04-06 00:00:26.459 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:list
+2026-04-06 00:00:26.459 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: education:student:list
+2026-04-06 00:00:26.459 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: education:teacher:list
+2026-04-06 00:00:26.459 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:list
+2026-04-06 00:00:26.459 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: course:offering:list
+2026-04-06 00:00:26.459 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:list
+2026-04-06 00:00:26.460 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: course:teaching:list
+2026-04-06 00:00:26.460 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: grade:input
+2026-04-06 00:00:26.460 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: grade:query
+2026-04-06 00:00:26.460 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: grade:stats
+2026-04-06 00:00:26.460 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: system:notice:list
+2026-04-06 00:00:26.460 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: system:todo:list
+2026-04-06 00:00:26.460 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile
+2026-04-06 00:00:26.460 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: education:department:query
+2026-04-06 00:00:26.460 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: course:course:query
+2026-04-06 00:00:26.460 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: course:selection:query
+2026-04-06 00:00:26.460 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:basic
+2026-04-06 00:00:26.460 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: dashboard:charts
+2026-04-06 00:00:26.460 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:query
+2026-04-06 00:00:26.460 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:edit
+2026-04-06 00:00:26.460 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加权限: system:user:profile:avatar
+2026-04-06 00:00:26.460 [http-nio-8080-exec-9] DEBUG com.example.student.security.LoginUser - 添加角色: teacher
+2026-04-06 00:00:26.460 [http-nio-8080-exec-9] INFO  com.example.student.security.LoginUser - 用户 teacher001 的权限列表: [education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher]
+2026-04-06 00:00:26.460 [http-nio-8080-exec-9] INFO  c.example.student.filter.JwtAuthenticationFilter - 用户 teacher001 认证成功，权限: education:department:list, education:student:list, education:teacher:list, course:course:list, course:offering:list, course:selection:list, course:teaching:list, grade:input, grade:query, grade:stats, system:notice:list, system:todo:list, system:user:profile, education:department:query, course:course:query, course:selection:query, dashboard:basic, dashboard:charts, system:user:profile:query, system:user:profile:edit, system:user:profile:avatar, teacher
+2026-04-06 00:00:26.462 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:26.462 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:26.465 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:26.470 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:26.474 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:26.475 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:26.477 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:26.478 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:26.480 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:26.487 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:26.490 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:26.492 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:26.493 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:26.494 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:26.496 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:26.504 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:26.507 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:26.510 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:26.512 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:26.513 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:26.517 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:26.520 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:26.524 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:26.524 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/course/material/list/4", parameters={}
+2026-04-06 00:00:26.527 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-04-06 00:00:26.544 [http-nio-8080-exec-9] DEBUG o.s.w.servlet.resource.ResourceHttpRequestHandler - Resource not found
+2026-04-06 00:00:26.545 [http-nio-8080-exec-9] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2026-04-06 00:00:26.546 [http-nio-8080-exec-9] INFO  c.example.student.filter.JwtAuthenticationFilter - 请求完成: GET /api/course/material/list/4 状态码: 404
+2026-04-06 00:00:26.548 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:26.551 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:26.551 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:26.552 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:26.554 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:26.554 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:26.554 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:26.554 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:26.554 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:26.555 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:26.555 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:26.558 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:26.558 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:26.558 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:26.559 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:26.559 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:26.559 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:26.561 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:26.562 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:26.562 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:26.562 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:26.562 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2026-04-06 00:00:26.563 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)

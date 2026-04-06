@@ -1,0 +1,29 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/LLM_Teaching_Management_System?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      database: 0
+      password: ''
+
+# 文件上传配置
+file:
+  upload:
+    path: D:\桌面\LLM_Teaching_Management_System\uploads
+  access:
+    path: /uploads
+
+# 开发环境特定日志配置
+logging:
+  level:
+    com.example.student: DEBUG
+    org.springframework.web: DEBUG
+    org.mybatis: DEBUG

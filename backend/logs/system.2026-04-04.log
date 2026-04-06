@@ -1,0 +1,100 @@
+2026-04-04 22:05:34.487 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-04-04 22:05:34.567 [main] INFO  c.e.student.StudentManagementSystemApplication - Starting StudentManagementSystemApplication v0.0.1-SNAPSHOT using Java 17.0.12 with PID 25620 (D:\桌面\student-management-master\backend\target\student-management-system-0.0.1-SNAPSHOT.jar started by HUAWEI in D:\桌面\student-management-master\backend)
+2026-04-04 22:05:34.567 [main] DEBUG c.e.student.StudentManagementSystemApplication - Running with Spring Boot v3.1.5, Spring v6.0.13
+2026-04-04 22:05:34.568 [main] INFO  c.e.student.StudentManagementSystemApplication - The following 1 profile is active: "dev"
+2026-04-04 22:05:36.494 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: URL [jar:file:/D:/桌面/student-management-master/backend/target/student-management-system-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/example/student/mapper/AdminMapper.class]
+2026-04-04 22:05:36.495 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: URL [jar:file:/D:/桌面/student-management-master/backend/target/student-management-system-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/example/student/mapper/AttendanceMapper.class]
+2026-04-04 22:05:36.495 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: URL [jar:file:/D:/桌面/student-management-master/backend/target/student-management-system-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/example/student/mapper/ClassMapper.class]
+2026-04-04 22:05:36.495 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: URL [jar:file:/D:/桌面/student-management-master/backend/target/student-management-system-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/example/student/mapper/CourseMapper.class]
+2026-04-04 22:05:36.496 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: URL [jar:file:/D:/桌面/student-management-master/backend/target/student-management-system-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/example/student/mapper/CourseOfferingMapper.class]
+2026-04-04 22:05:36.496 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: URL [jar:file:/D:/桌面/student-management-master/backend/target/student-management-system-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/example/student/mapper/CourseSelectionMapper.class]
+2026-04-04 22:05:36.496 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: URL [jar:file:/D:/桌面/student-management-master/backend/target/student-management-system-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/example/student/mapper/DepartmentMapper.class]
+2026-04-04 22:05:36.496 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: URL [jar:file:/D:/桌面/student-management-master/backend/target/student-management-system-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/example/student/mapper/GradeMapper.class]
+2026-04-04 22:05:36.496 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: URL [jar:file:/D:/桌面/student-management-master/backend/target/student-management-system-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/example/student/mapper/MajorMapper.class]
+2026-04-04 22:05:36.496 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: URL [jar:file:/D:/桌面/student-management-master/backend/target/student-management-system-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/example/student/mapper/NoticeMapper.class]
+2026-04-04 22:05:36.497 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: URL [jar:file:/D:/桌面/student-management-master/backend/target/student-management-system-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/example/student/mapper/StudentMapper.class]
+2026-04-04 22:05:36.499 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: URL [jar:file:/D:/桌面/student-management-master/backend/target/student-management-system-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/example/student/mapper/SysMenuMapper.class]
+2026-04-04 22:05:36.499 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: URL [jar:file:/D:/桌面/student-management-master/backend/target/student-management-system-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/example/student/mapper/SysRoleMapper.class]
+2026-04-04 22:05:36.499 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: URL [jar:file:/D:/桌面/student-management-master/backend/target/student-management-system-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/example/student/mapper/SysRoleMenuMapper.class]
+2026-04-04 22:05:36.499 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: URL [jar:file:/D:/桌面/student-management-master/backend/target/student-management-system-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/example/student/mapper/SysUserMapper.class]
+2026-04-04 22:05:36.501 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: URL [jar:file:/D:/桌面/student-management-master/backend/target/student-management-system-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/example/student/mapper/SysUserRoleMapper.class]
+2026-04-04 22:05:36.501 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: URL [jar:file:/D:/桌面/student-management-master/backend/target/student-management-system-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/example/student/mapper/TeacherMapper.class]
+2026-04-04 22:05:36.502 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: URL [jar:file:/D:/桌面/student-management-master/backend/target/student-management-system-0.0.1-SNAPSHOT.jar!/BOOT-INF/classes!/com/example/student/mapper/TodoItemMapper.class]
+2026-04-04 22:05:36.505 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'adminMapper' and 'com.example.student.mapper.AdminMapper' mapperInterface
+2026-04-04 22:05:36.510 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'adminMapper'.
+2026-04-04 22:05:36.510 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'attendanceMapper' and 'com.example.student.mapper.AttendanceMapper' mapperInterface
+2026-04-04 22:05:36.513 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'attendanceMapper'.
+2026-04-04 22:05:36.513 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'classMapper' and 'com.example.student.mapper.ClassMapper' mapperInterface
+2026-04-04 22:05:36.513 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'classMapper'.
+2026-04-04 22:05:36.513 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'courseMapper' and 'com.example.student.mapper.CourseMapper' mapperInterface
+2026-04-04 22:05:36.514 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'courseMapper'.
+2026-04-04 22:05:36.514 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'courseOfferingMapper' and 'com.example.student.mapper.CourseOfferingMapper' mapperInterface
+2026-04-04 22:05:36.516 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'courseOfferingMapper'.
+2026-04-04 22:05:36.516 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'courseSelectionMapper' and 'com.example.student.mapper.CourseSelectionMapper' mapperInterface
+2026-04-04 22:05:36.520 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'courseSelectionMapper'.
+2026-04-04 22:05:36.522 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'departmentMapper' and 'com.example.student.mapper.DepartmentMapper' mapperInterface
+2026-04-04 22:05:36.525 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'departmentMapper'.
+2026-04-04 22:05:36.525 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'gradeMapper' and 'com.example.student.mapper.GradeMapper' mapperInterface
+2026-04-04 22:05:36.527 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'gradeMapper'.
+2026-04-04 22:05:36.527 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'majorMapper' and 'com.example.student.mapper.MajorMapper' mapperInterface
+2026-04-04 22:05:36.534 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'majorMapper'.
+2026-04-04 22:05:36.534 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'noticeMapper' and 'com.example.student.mapper.NoticeMapper' mapperInterface
+2026-04-04 22:05:36.534 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'noticeMapper'.
+2026-04-04 22:05:36.536 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'studentMapper' and 'com.example.student.mapper.StudentMapper' mapperInterface
+2026-04-04 22:05:36.538 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'studentMapper'.
+2026-04-04 22:05:36.538 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'sysMenuMapper' and 'com.example.student.mapper.SysMenuMapper' mapperInterface
+2026-04-04 22:05:36.542 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'sysMenuMapper'.
+2026-04-04 22:05:36.542 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'sysRoleMapper' and 'com.example.student.mapper.SysRoleMapper' mapperInterface
+2026-04-04 22:05:36.544 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'sysRoleMapper'.
+2026-04-04 22:05:36.544 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'sysRoleMenuMapper' and 'com.example.student.mapper.SysRoleMenuMapper' mapperInterface
+2026-04-04 22:05:36.546 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'sysRoleMenuMapper'.
+2026-04-04 22:05:36.546 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'sysUserMapper' and 'com.example.student.mapper.SysUserMapper' mapperInterface
+2026-04-04 22:05:36.547 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'sysUserMapper'.
+2026-04-04 22:05:36.547 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'sysUserRoleMapper' and 'com.example.student.mapper.SysUserRoleMapper' mapperInterface
+2026-04-04 22:05:36.547 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'sysUserRoleMapper'.
+2026-04-04 22:05:36.547 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'teacherMapper' and 'com.example.student.mapper.TeacherMapper' mapperInterface
+2026-04-04 22:05:36.548 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'teacherMapper'.
+2026-04-04 22:05:36.548 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'todoItemMapper' and 'com.example.student.mapper.TodoItemMapper' mapperInterface
+2026-04-04 22:05:36.548 [main] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'todoItemMapper'.
+2026-04-04 22:05:37.492 [main] ERROR org.apache.catalina.core.AprLifecycleListener - An incompatible version [1.2.26] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
+2026-04-04 22:05:38.179 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-04 22:05:38.183 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-04 22:05:38.184 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.15]
+2026-04-04 22:05:38.449 [main] INFO  o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2026-04-04 22:05:39.083 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.example.student.mapper.AttendanceMapper.getClassesByIds] is ignored, because it exists, maybe from xml file
+2026-04-04 22:05:39.083 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.example.student.mapper.AttendanceMapper.getClassAttendanceStatisticsById] is ignored, because it exists, maybe from xml file
+2026-04-04 22:05:39.183 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.example.student.mapper.ClassMapper.selectClassList] is ignored, because it exists, maybe from xml file
+2026-04-04 22:05:39.250 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.example.student.mapper.CourseMapper.selectCourseBySemester] is ignored, because it exists, maybe from xml file
+2026-04-04 22:05:39.251 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.example.student.mapper.CourseMapper.selectCourseCountByDepartment] is ignored, because it exists, maybe from xml file
+2026-04-04 22:05:39.319 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.example.student.mapper.CourseOfferingMapper.getClassIdByCourseOfferingId] is ignored, because it exists, maybe from xml file
+2026-04-04 22:05:39.333 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.example.student.mapper.CourseOfferingMapper.selectAllSemesters] is ignored, because it exists, maybe from xml file
+2026-04-04 22:05:39.601 [main] ERROR c.baomidou.mybatisplus.core.MybatisConfiguration - mapper[com.example.student.mapper.NoticeMapper.selectPublishedNotices] is ignored, because it exists, maybe from xml file
+2026-04-04 22:05:39.762 [main] WARN  c.b.mybatisplus.core.injector.DefaultSqlInjector - class com.example.student.entity.SysRoleMenu ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2026-04-04 22:05:40.156 [main] DEBUG c.example.student.filter.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-04-04 22:05:40.156 [main] DEBUG org.springframework.web.filter.CorsFilter - Filter 'corsFilter' configured for use
+2026-04-04 22:05:41.490 [main] INFO  com.example.student.config.SecurityConfig - 创建认证管理器，使用UserDetailsService: com.example.student.security.UserDetailsServiceImpl
+2026-04-04 22:05:43.288 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 198 mappings in 'requestMappingHandlerMapping'
+2026-04-04 22:05:44.777 [main] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /uploads/**, /api/uploads/**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-04-04 22:05:44.938 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4228bf58, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@68b9834c, org.springframework.security.web.context.SecurityContextHolderFilter@d5d5353, org.springframework.security.web.header.HeaderWriterFilter@73844119, org.springframework.security.web.authentication.logout.LogoutFilter@1cc680e, com.example.student.filter.JwtAuthenticationFilter@6d4c273c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@39a87e72, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3a082ff4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@20b9d5d5, org.springframework.security.web.session.SessionManagementFilter@1687eb01, org.springframework.security.web.access.ExceptionTranslationFilter@350d3f4d, org.springframework.security.web.access.intercept.AuthorizationFilter@6f94fb9d]
+2026-04-04 22:05:45.339 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-04-04 22:05:45.505 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 3 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-04-04 22:05:47.859 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-04 22:05:47.889 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-04-04 22:05:47.955 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2026-04-04 22:05:47.955 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2026-04-04 22:05:47.978 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2026-04-04 22:05:47.979 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+2026-04-04 22:05:48.078 [main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
