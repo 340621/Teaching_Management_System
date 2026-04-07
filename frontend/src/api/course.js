@@ -274,9 +274,51 @@ export function checkTimeConflict(data) {
  * @param {Number} courseId 课程ID
  * @returns 教材信息
  */
-export function getCourseMaterials(courseId) {
+export function getCourseMaterials(courseId, params) {
   return request({
     url: `/course/${courseId}/materials`,
-    method: 'get'
+    method: 'get',
+    params
+  })
+}
+
+/**
+ * 上传课程资料
+ * @param {FormData} formData 包含文件的表单数据
+ * @returns 上传结果
+ */
+export function uploadCourseMaterial(formData) {
+  return request({
+    url: '/course/materials/upload',
+    method: 'post',
+    data: formData,
+    headers: {
+      'Content-Type': 'multipart/form-data'
+    }
+  })
+}
+
+/**
+ * 删除课程资料
+ * @param {Number} materialId 资料ID
+ * @returns 删除结果
+ */
+export function deleteCourseMaterial(materialId) {
+  return request({
+    url: `/course/materials/${materialId}`,
+    method: 'delete'
+  })
+}
+
+/**
+ * 下载课程资料
+ * @param {Number} materialId 资料ID
+ * @returns 文件流
+ */
+export function downloadCourseMaterial(materialId) {
+  return request({
+    url: `/course/materials/${materialId}/download`,
+    method: 'get',
+    responseType: 'blob'
   })
 } 

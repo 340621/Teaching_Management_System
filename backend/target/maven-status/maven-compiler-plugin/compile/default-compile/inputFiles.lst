@@ -5,7 +5,6 @@ D:\桌面\LLM_Teaching_Management_System\backend\src\main\java\com\example\student
 D:\桌面\LLM_Teaching_Management_System\backend\src\main\java\com\example\student\vo\AdminVO.java
 D:\桌面\LLM_Teaching_Management_System\backend\src\main\java\com\example\student\service\impl\NoticeServiceImpl.java
 D:\桌面\LLM_Teaching_Management_System\backend\src\main\java\com\example\student\config\CorsConfig.java
-D:\桌面\LLM_Teaching_Management_System\backend\src\main\java\com\example\student\controller\CourseMaterialController.java
 D:\桌面\LLM_Teaching_Management_System\backend\src\main\java\com\example\student\entity\StatisticsData.java
 D:\桌面\LLM_Teaching_Management_System\backend\src\main\java\com\example\student\common\CommonPage.java
 D:\桌面\LLM_Teaching_Management_System\backend\src\main\java\com\example\student\service\TodoItemService.java
@@ -36,6 +35,7 @@ D:\桌面\LLM_Teaching_Management_System\backend\src\main\java\com\example\student
 D:\桌面\LLM_Teaching_Management_System\backend\src\main\java\com\example\student\controller\MajorController.java
 D:\桌面\LLM_Teaching_Management_System\backend\src\main\java\com\example\student\filter\JwtAuthenticationFilter.java
 D:\桌面\LLM_Teaching_Management_System\backend\src\main\java\com\example\student\mapper\MajorMapper.java
+D:\桌面\LLM_Teaching_Management_System\backend\src\main\java\com\example\student\config\SystemConfig.java
 D:\桌面\LLM_Teaching_Management_System\backend\src\main\java\com\example\student\dto\StudentDTO.java
 D:\桌面\LLM_Teaching_Management_System\backend\src\main\java\com\example\student\service\impl\TodoItemServiceImpl.java
 D:\桌面\LLM_Teaching_Management_System\backend\src\main\java\com\example\student\service\impl\DashboardServiceImpl.java
@@ -70,6 +70,7 @@ D:\桌面\LLM_Teaching_Management_System\backend\src\main\java\com\example\student
 D:\桌面\LLM_Teaching_Management_System\backend\src\main\java\com\example\student\util\StrUtil.java
 D:\桌面\LLM_Teaching_Management_System\backend\src\main\java\com\example\student\entity\Teacher.java
 D:\桌面\LLM_Teaching_Management_System\backend\src\main\java\com\example\student\dto\StudentImportDTO.java
+D:\桌面\LLM_Teaching_Management_System\backend\src\main\java\com\example\student\controller\SystemConfigController.java
 D:\桌面\LLM_Teaching_Management_System\backend\src\main\java\com\example\student\vo\ClassVO.java
 D:\桌面\LLM_Teaching_Management_System\backend\src\main\java\com\example\student\vo\SemesterStatisticsVO.java
 D:\桌面\LLM_Teaching_Management_System\backend\src\main\java\com\example\student\vo\TeacherCourseStudentVO.java

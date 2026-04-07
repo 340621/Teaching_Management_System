@@ -11,6 +11,8 @@ import com.example.student.dto.CourseQueryDTO;
 import com.example.student.entity.Course;
 import com.example.student.mapper.CourseMapper;
 import com.example.student.service.CourseService;
+import com.example.student.service.CourseOfferingService;
+import com.example.student.dto.CourseOfferingDTO;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -39,6 +41,7 @@ import java.util.regex.Pattern;
 public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> implements CourseService {
 
     private final CourseMapper courseMapper;
+    private final CourseOfferingService courseOfferingService;
 
     @Override
     public PageResult<Course> getCoursePage(CourseQueryDTO queryDTO) {
@@ -169,6 +172,18 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
         if (!save(course)) {
             throw new BusinessException("新增课程失败");
         }
+        
+        // 创建课程开设记录并分配教师
+        CourseOfferingDTO offeringDTO = new CourseOfferingDTO();
+        offeringDTO.setCourseId(course.getId());
+        offeringDTO.setTeacherId(courseDTO.getTeacherId());
+        offeringDTO.setSemester("2025-2026-2"); // 默认当前学期
+        offeringDTO.setClassTime(""); // 暂时为空，后续可以在课程开设页面修改
+        offeringDTO.setLocation(""); // 暂时为空，后续可以在课程开设页面修改
+        offeringDTO.setCapacity(50); // 默认容量
+        offeringDTO.setStatus(0); // 未开始状态
+        
+        courseOfferingService.add(offeringDTO);
         
         // TODO: 保存课程与专业的关系、保存先修课程关系等
     }

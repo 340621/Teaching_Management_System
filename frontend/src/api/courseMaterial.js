@@ -3,7 +3,7 @@ import request from '@/utils/request'
 // 上传课程资料
 export function uploadCourseMaterial(data) {
   return request({
-    url: '/course/material/upload',
+    url: '/course/materials/upload',
     method: 'post',
     data,
     headers: {
@@ -13,20 +13,18 @@ export function uploadCourseMaterial(data) {
 }
 
 // 获取课程资料列表
-export function getCourseMaterials(courseId) {
+export function getCourseMaterials(courseId, params) {
   return request({
-    url: `/course/material/list/${courseId}`,
-    method: 'get'
+    url: `/course/${courseId}/materials`,
+    method: 'get',
+    params
   })
 }
 
 // 删除课程资料
-export function deleteCourseMaterial(id, uploaderId) {
+export function deleteCourseMaterial(id) {
   return request({
-    url: `/course/material/delete/${id}`,
-    method: 'delete',
-    params: {
-      uploaderId
-    }
+    url: `/course/materials/${id}`,
+    method: 'delete'
   })
 }

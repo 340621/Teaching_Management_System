@@ -102,6 +102,20 @@ export const constantRoutes = [
         name: 'CourseList',
         component: loadView('course/index'),
         meta: { title: '课程列表' }
+      },
+      {
+        path: 'students',
+        name: 'CourseStudents',
+        component: loadView('course/teaching/students'),
+        meta: { title: '课程学生' },
+        hidden: true
+      },
+      {
+        path: 'materials',
+        name: 'CourseMaterials',
+        component: loadView('course/materials'),
+        meta: { title: '课程资料' },
+        hidden: true
       }
     ],
     hidden: true

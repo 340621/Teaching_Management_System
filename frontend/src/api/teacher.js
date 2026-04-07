@@ -1,165 +1,99 @@
 import request from '@/utils/request'
 
 /**
- * 获取教师列表
- * @param {Object} query 查询参数
- * @returns {Promise}
+ * 获取所有教师列表
+ * @returns 教师列表
  */
-export function getTeacherList(query) {
+export function getAllTeachers() {
   return request({
-    url: '/teacher/list',
-    method: 'post',
-    data: query
-  })
-}
-
-/**
- * 获取教师详情
- * @param {Number} teacherId 教师ID
- * @returns {Promise}
- */
-export function getTeacherDetail(teacherId) {
-  return request({
-    url: `/teacher/${teacherId}`,
+    url: '/teacher/all',
     method: 'get'
   })
 }
 
 /**
- * 添加教师
+ * 获取教师列表
+ * @param {Object} params 查询参数
+ * @returns 教师列表
+ */
+export function getTeacherList(params) {
+  return request({
+    url: '/teacher/list',
+    method: 'get',
+    params
+  })
+}
+
+/**
+ * 获取教师详情
+ * @param {number} id 教师ID
+ * @returns 教师详情
+ */
+export function getTeacherDetail(id) {
+  return request({
+    url: `/teacher/${id}`,
+    method: 'get'
+  })
+}
+
+/**
+ * 新增教师
  * @param {Object} data 教师数据
- * @returns {Promise}
+ * @returns 操作结果
  */
 export function addTeacher(data) {
   return request({
     url: '/teacher',
     method: 'post',
-    data: data
+    data
   })
 }
 
 /**
- * 修改教师
+ * 更新教师
  * @param {Object} data 教师数据
- * @returns {Promise}
+ * @returns 操作结果
  */
 export function updateTeacher(data) {
   return request({
     url: '/teacher',
     method: 'put',
-    data: data
+    data
   })
 }
 
 /**
  * 删除教师
- * @param {Number} teacherId 教师ID
- * @returns {Promise}
+ * @param {number} id 教师ID
+ * @returns 操作结果
  */
-export function deleteTeacher(teacherId) {
+export function deleteTeacher(id) {
   return request({
-    url: `/teacher/${teacherId}`,
+    url: `/teacher/${id}`,
     method: 'delete'
   })
 }
 
 /**
  * 重置教师密码
- * @param {Number} teacherId 教师ID
- * @returns {Promise}
+ * @param {number} id 教师ID
+ * @returns 操作结果
  */
-export function resetTeacherPassword(teacherId) {
+export function resetTeacherPassword(id) {
   return request({
-    url: `/teacher/resetPassword/${teacherId}`,
+    url: `/teacher/${id}/reset-password`,
     method: 'put'
-  })
-}
-
-/**
- * 更新教师状态
- * @param {Number} teacherId 教师ID
- * @param {Number} status 状态值
- * @returns {Promise}
- */
-export function updateTeacherStatus(teacherId, status) {
-  return request({
-    url: `/teacher/status/${teacherId}/${status}`,
-    method: 'put'
-  })
-}
-
-/**
- * 获取教师课程列表
- * @param {Number} teacherId 教师ID
- * @param {Object} query 查询参数
- * @returns {Promise}
- */
-export function getTeacherCourses(teacherId, query) {
-  return request({
-    url: `/teacher/courses/${teacherId}`,
-    method: 'post',
-    data: query
-  })
-}
-
-/**
- * 获取教师课程学生列表
- * @param {Number} teacherId 教师ID
- * @param {Number} courseId 课程ID
- * @param {Object} query 查询参数
- * @returns {Promise}
- */
-export function getTeacherCourseStudents(teacherId, courseId, query) {
-  const queryParams = { ...query };
-  if (teacherId !== null && teacherId !== undefined) {
-    queryParams.teacherId = teacherId;
-  }
-  
-  return request({
-    url: `/teacher/courses/students/${courseId}`,
-    method: 'post',
-    data: queryParams
-  })
-}
-
-/**
- * 提交学生成绩
- * @param {Number} teacherId 教师ID
- * @param {Number} courseId 课程ID
- * @param {Object} data 成绩数据
- * @returns {Promise}
- */
-export function submitStudentGrade(teacherId, courseId, data) {
-  return request({
-    url: `/teacher/courses/${teacherId}/grade/${courseId}`,
-    method: 'put',
-    data: data
-  })
-}
-
-
-
-/**
- * 获取教师统计数据
- * @param {Number} teacherId 教师ID
- * @returns {Promise}
- */
-export function getTeacherStatistics(teacherId) {
-  return request({
-    url: `/teacher/statistics/${teacherId || ''}`,
-    method: 'get'
   })
 }
 
 /**
  * 导入教师数据
- * @param {File} file 教师数据文件
- * @returns {Promise}
+ * @param {File} file 导入文件
+ * @returns 操作结果
  */
 export function importTeacher(file) {
   const formData = new FormData()
   formData.append('file', file)
-  
   return request({
     url: '/teacher/import',
     method: 'post',
@@ -172,21 +106,21 @@ export function importTeacher(file) {
 
 /**
  * 导出教师数据
- * @param {Object} query 查询参数
- * @returns {Promise}
+ * @param {Object} params 查询参数
+ * @returns 文件流
  */
-export function exportTeacher(query) {
+export function exportTeacher(params) {
   return request({
     url: '/teacher/export',
-    method: 'post',
-    data: query,
+    method: 'get',
+    params,
     responseType: 'blob'
   })
 }
 
 /**
- * 获取教师导入模板
- * @returns {Promise}
+ * 下载教师导入模板
+ * @returns 文件流
  */
 export function downloadTeacherTemplate() {
   return request({
@@ -197,51 +131,81 @@ export function downloadTeacherTemplate() {
 }
 
 /**
- * 获取教师课表
- * @param {Number} teacherId 教师ID
- * @param {Object} query 查询参数，如学期信息
- * @returns {Promise}
+ * 更新教师状态
+ * @param {number} id 教师ID
+ * @param {number} status 状态
+ * @returns 操作结果
  */
-export function getTeacherSchedule(teacherId, query) {
+export function updateTeacherStatus(id, status) {
   return request({
-    url: `/teacher/schedule/${teacherId}`,
-    method: 'post',
-    data: query
+    url: `/teacher/${id}/status`,
+    method: 'put',
+    data: { status }
   })
 }
 
 /**
- * 获取教师教学评价
- * @param {Number} teacherId 教师ID
- * @param {Object} query 查询参数，如学期信息
- * @returns {Promise}
+ * 获取教师课程
+ * @param {number} id 教师ID
+ * @returns 课程列表
  */
-export function getTeacherEvaluations(teacherId, query) {
+export function getTeacherCourses(id) {
   return request({
-    url: `/teacher/evaluations/${teacherId}`,
-    method: 'post',
-    data: query
-  })
-}
-
-/**
- * 获取所有院系列表（不分页）
- * @returns {Promise}
- */
-export function getAllDepartments() {
-  return request({
-    url: '/education/department/all',
+    url: `/teacher/${id}/courses`,
     method: 'get'
   })
 }
 
 /**
- * 获取所有教师（用于下拉框）
+ * 获取教师课表
+ * @param {number} id 教师ID
+ * @returns 课表信息
  */
-export function getAllTeachers() {
+export function getTeacherSchedule(id) {
   return request({
-    url: '/teacher/list',
+    url: `/teacher/${id}/schedule`,
+    method: 'get'
+  })
+}
+
+/**
+ * 获取教师评价
+ * @param {number} id 教师ID
+ * @returns 评价列表
+ */
+export function getTeacherEvaluations(id) {
+  return request({
+    url: `/teacher/${id}/evaluations`,
+    method: 'get'
+  })
+}
+
+/**
+ * 获取教师课程学生列表
+ * @param {number} teacherId 教师ID
+ * @param {number} courseId 课程ID
+ * @param {Object} params 查询参数
+ * @returns 学生列表
+ */
+export function getTeacherCourseStudents(teacherId, courseId, params) {
+  return request({
+    url: `/teacher/courses/${teacherId}/students/${courseId}`,
     method: 'post',
-    data: { pageNum: 1, pageSize: 1000 }
+    data: params
+  })
+}
+
+/**
+ * 提交学生成绩
+ * @param {number} teacherId 教师ID
+ * @param {number} courseId 课程ID
+ * @param {Object} data 成绩数据
+ * @returns 操作结果
+ */
+export function submitStudentGrade(teacherId, courseId, data) {
+  return request({
+    url: `/teacher/courses/${teacherId}/grade/${courseId}`,
+    method: 'put',
+    data: data
   })
 }

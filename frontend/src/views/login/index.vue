@@ -5,7 +5,11 @@
       <el-card class="login-card">
         <!-- 标题 -->
         <div class="title-container">
-          <h3 class="title">融入大语言模型的教学管理系统</h3>
+          <div class="logo">
+            <i class="el-icon-school" style="font-size: 32px; color: #409EFF;"></i>
+          </div>
+          <h3 class="title">高校教学管理系统</h3>
+          <p class="subtitle">Education Management System</p>
         </div>
         
         <!-- 登录表单 -->
@@ -20,7 +24,7 @@
           <el-form-item prop="username">
             <el-input
               v-model="loginForm.username"
-              placeholder="用户名"
+              placeholder="请输入学号/教师编号/用户名"
               prefix-icon="User"
               clearable
             />
@@ -30,7 +34,7 @@
           <el-form-item prop="password">
             <el-input
               v-model="loginForm.password"
-              placeholder="密码"
+              placeholder="请输入密码"
               :type="passwordType"
               prefix-icon="Lock"
               clearable
@@ -60,25 +64,25 @@
             class="login-button"
             @click="handleLogin"
           >
-            {{ loading ? '登录中...' : '登 录' }}
+            {{ loading ? '登录中...' : '登录' }}
           </el-button>
         </el-form>
         
-
       </el-card>
       
       <!-- 版权信息 -->
       <div class="copyright">
-        © {{ new Date().getFullYear() }} EduSmart 高校智能管理平台
+        © {{ new Date().getFullYear() }} 高校教学管理系统 | 版权所有
       </div>
     </div>
     
-    <!-- 背景动画 -->
+    <!-- 背景元素 -->
     <div class="bg-container">
-      <div class="circle circle-1"></div>
-      <div class="circle circle-2"></div>
-      <div class="circle circle-3"></div>
-      <div class="circle circle-4"></div>
+      <div class="bg-shape bg-shape-1"></div>
+      <div class="bg-shape bg-shape-2"></div>
+      <div class="bg-shape bg-shape-3"></div>
+      <div class="bg-shape bg-shape-4"></div>
+      <div class="bg-grid"></div>
     </div>
   </div>
 </template>
@@ -154,43 +158,63 @@ const handleLogin = () => {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  background: linear-gradient(135deg, #1890ff 0%, #722ed1 100%);
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;
   
   .login-box {
     position: relative;
     z-index: 2;
-    width: 400px;
+    width: 420px;
     
     .login-card {
-      padding: 20px 35px;
-      border-radius: 8px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+      
+      &:hover {
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      }
       
       .title-container {
-        margin-bottom: 30px;
+        margin-bottom: 35px;
         text-align: center;
         
+        .logo {
+          margin-bottom: 15px;
+        }
+        
         .title {
-          margin: 0;
-          font-size: 22px;
+          margin: 0 0 5px 0;
+          font-size: 24px;
           font-weight: 600;
-          color: #1890ff;
+          color: #303133;
+        }
+        
+        .subtitle {
+          margin: 0;
+          font-size: 14px;
+          color: #909399;
         }
       }
       
       .login-form {
         .el-form-item {
-          margin-bottom: 25px;
+          margin-bottom: 20px;
           
           .el-input {
-            height: 42px;
+            height: 44px;
+            border-radius: 8px;
             
             input {
-              height: 42px;
+              height: 44px;
+              border-radius: 8px;
             }
           }
         }
@@ -198,10 +222,11 @@ const handleLogin = () => {
         .remember-container {
           display: flex;
           justify-content: space-between;
-          margin-bottom: 20px;
+          margin-bottom: 25px;
+          font-size: 14px;
           
           .forget-link {
-            color: #1890ff;
+            color: #409EFF;
             cursor: pointer;
             
             &:hover {
@@ -214,25 +239,31 @@ const handleLogin = () => {
           width: 100%;
           height: 44px;
           font-weight: 600;
+          border-radius: 8px;
           margin-bottom: 20px;
         }
       }
       
       .tips {
-        margin-top: 10px;
+        margin-top: 20px;
+        padding: 15px;
+        background: #f5f7fa;
+        border-radius: 8px;
         font-size: 13px;
-        color: #909399;
-        text-align: center;
+        color: #606266;
         line-height: 1.5;
+        
+        p {
+          margin: 5px 0;
+        }
       }
     }
     
     .copyright {
-      margin-top: 20px;
+      margin-top: 25px;
       text-align: center;
-      color: #fff;
-      font-size: 14px;
-      opacity: 0.8;
+      color: #606266;
+      font-size: 13px;
     }
   }
   
@@ -244,53 +275,70 @@ const handleLogin = () => {
     bottom: 0;
     z-index: 1;
     
-    .circle {
+    .bg-shape {
       position: absolute;
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
+      background: rgba(64, 158, 255, 0.1);
       
-      &.circle-1 {
-        width: 200px;
-        height: 200px;
-        top: 10%;
-        left: 15%;
-        animation: float 6s infinite alternate;
-      }
-      
-      &.circle-2 {
+      &.bg-shape-1 {
         width: 300px;
         height: 300px;
-        bottom: 10%;
-        right: 15%;
-        animation: float 8s infinite alternate-reverse;
+        top: -100px;
+        left: -100px;
+        animation: float 12s infinite ease-in-out;
       }
       
-      &.circle-3 {
-        width: 120px;
-        height: 120px;
+      &.bg-shape-2 {
+        width: 200px;
+        height: 200px;
         top: 20%;
-        right: 20%;
-        animation: float 5s infinite alternate;
+        right: 10%;
+        animation: float 10s infinite ease-in-out reverse;
       }
       
-      &.circle-4 {
+      &.bg-shape-3 {
         width: 150px;
         height: 150px;
-        bottom: 20%;
-        left: 20%;
-        animation: float 7s infinite alternate-reverse;
+        bottom: 10%;
+        left: 15%;
+        animation: float 8s infinite ease-in-out;
       }
+      
+      &.bg-shape-4 {
+        width: 250px;
+        height: 250px;
+        bottom: -100px;
+        right: -100px;
+        animation: float 14s infinite ease-in-out reverse;
+      }
+    }
+    
+    .bg-grid {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        linear-gradient(rgba(64, 158, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(64, 158, 255, 0.05) 1px, transparent 1px);
+      background-size: 50px 50px;
     }
   }
 }
 
 @keyframes float {
-  0% {
-    transform: translateY(0) rotate(0deg);
+  0%, 100% {
+    transform: translateY(0) translateX(0);
   }
-  100% {
-    transform: translateY(30px) rotate(10deg);
+  25% {
+    transform: translateY(-20px) translateX(10px);
+  }
+  50% {
+    transform: translateY(0) translateX(20px);
+  }
+  75% {
+    transform: translateY(20px) translateX(10px);
   }
 }
 </style>

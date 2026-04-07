@@ -132,4 +132,12 @@ public interface TeacherMapper extends BaseMapper<Teacher> {
      * @return 教师列表
      */
     List<Map<String, Object>> searchTeachersByName(@Param("name") String name);
+    
+    /**
+     * 根据教师编号查询用户ID
+     *
+     * @param teacherNo 教师编号
+     * @return 用户ID
+     */
+    Long selectUserIdByTeacherNo(@Param("teacherNo") String teacherNo);
 }

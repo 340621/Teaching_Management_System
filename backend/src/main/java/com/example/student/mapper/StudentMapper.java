@@ -176,4 +176,12 @@ public interface StudentMapper extends BaseMapper<Student> {
         @Param("courseCode") String courseCode,
         @Param("semester") String semester
     );
+    
+    /**
+     * 根据学号查询用户ID
+     *
+     * @param studentNo 学号
+     * @return 用户ID
+     */
+    Long selectUserIdByStudentNo(@Param("studentNo") String studentNo);
 } 

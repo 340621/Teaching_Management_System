@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -265,5 +266,18 @@ public class TeacherController {
     @GetMapping("/template")
     public void downloadTemplate(HttpServletResponse response) throws IOException {
         teacherService.downloadTeacherTemplate(response);
+    }
+
+    /**
+     * 获取所有教师列表
+     *
+     * @return 教师列表
+     */
+    @Operation(summary = "获取所有教师列表", description = "获取所有教师列表接口")
+    @PreAuthorize("@ss.hasAnyRole('admin')")
+    @GetMapping("/all")
+    public Result<List<TeacherVO>> getAllTeachers() {
+        List<TeacherVO> teachers = teacherService.getAllTeachers();
+        return Result.success(teachers);
     }
 } 

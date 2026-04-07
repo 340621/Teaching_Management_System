@@ -47,6 +47,10 @@ public class CourseDTO {
     @Schema(description = "开课院系ID", requiredMode = Schema.RequiredMode.REQUIRED)
     private Long departmentId;
 
+    @NotNull(message = "授课教师不能为空")
+    @Schema(description = "授课教师ID", requiredMode = Schema.RequiredMode.REQUIRED)
+    private Long teacherId;
+
     @Size(max = 500, message = "课程描述长度不能超过500个字符")
     @Schema(description = "课程描述")
     private String description;

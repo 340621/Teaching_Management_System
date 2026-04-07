@@ -8,16 +8,14 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.example.student.common.PageResult;
 import com.example.student.dto.GradeImportDTO;
 import com.example.student.dto.GradeQueryDTO;
-import com.example.student.entity.Course;
-import com.example.student.entity.CourseOffering;
-import com.example.student.entity.CourseSelection;
-import com.example.student.entity.Student;
+import com.example.student.entity.*;
 import com.example.student.mapper.ClassMapper;
 import com.example.student.mapper.CourseMapper;
 import com.example.student.mapper.CourseSelectionMapper;
 import com.example.student.mapper.CourseOfferingMapper;
 import com.example.student.mapper.StudentMapper;
 import com.example.student.service.GradeService;
+import com.example.student.service.TeacherService;
 import com.example.student.util.ExcelUtils;
 import com.example.student.vo.GradeStatisticsVO;
 import com.example.student.vo.StudentGradeVO;
@@ -46,6 +44,7 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.example.student.exception.ServiceException;
 import com.example.student.util.StrUtil;
+import com.example.student.util.SecurityUtils;
 
 /**
  * 成绩服务实现类
@@ -64,6 +63,9 @@ public class GradeServiceImpl implements GradeService {
     
     @Resource
     private StudentMapper studentMapper;
+    
+    @Resource
+    private TeacherService teacherService;
 
     @Override
     public GradeStatisticsVO getGradeStatistics(GradeQueryDTO queryDTO) {
@@ -132,7 +134,26 @@ public class GradeServiceImpl implements GradeService {
 
     @Override
     public List<Map<String, Object>> getCourseOptions() {
-        return courseMapper.selectCourseOptions();
+        // 获取当前登录用户
+        Long userId = SecurityUtils.getUserId();
+        if (userId == null) {
+            return courseMapper.selectCourseOptions();
+        }
+        
+        // 检查用户是否是教师
+        boolean isTeacher = SecurityUtils.hasRole("teacher");
+        if (!isTeacher) {
+            return courseMapper.selectCourseOptions();
+        }
+        
+        // 获取教师信息
+        Teacher teacher = teacherService.getTeacherByUserId(userId);
+        if (teacher == null) {
+            return courseMapper.selectCourseOptions();
+        }
+        
+        // 查询教师的课程选项
+        return courseOfferingMapper.selectTeacherCourseOptions(teacher.getId());
     }
 
     @Override
@@ -650,6 +671,13 @@ public class GradeServiceImpl implements GradeService {
                         String grade = calculateGrade(importDTO.getScore());
                         // 判断是否通过
                         Integer isPassed = importDTO.getScore() >= 60 ? 1 : 0;
+                        
+                        // 如果有成绩且大于等于60分，设置为已修完
+                        if (importDTO.getScore() >= 60) {
+                            selection.setStatus(2); // 已修完
+                        } else {
+                            selection.setStatus(0); // 已选(不及格)
+                        }
                         
                         // 更新选课记录
                         courseSelectionMapper.updateById(selection);

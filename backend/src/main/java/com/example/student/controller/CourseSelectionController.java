@@ -281,7 +281,7 @@ public class CourseSelectionController {
      */
     @Operation(summary = "获取学期列表")
     @GetMapping("/semesters")
-    @PreAuthorize("@auth.hasPermi('course:selection:list')")
+    // @PreAuthorize("@auth.hasPermi('course:selection:list')")
     public Result<List<SemesterVO>> getSemesters() {
         return Result.success(courseSelectionService.getSemesters());
     }

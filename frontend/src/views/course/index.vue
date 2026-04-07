@@ -815,9 +815,12 @@ const getCourseMaterialsList = async () => {
   
   materialsLoading.value = true
   try {
-    const res = await getCourseMaterials(selectedCourse.value.id)
-    if (res.data) {
-      materialsList.value = res.data
+    const res = await getCourseMaterials(selectedCourse.value.id, {
+      pageNum: 1,
+      pageSize: 100
+    })
+    if (res.data && res.data.rows) {
+      materialsList.value = res.data.rows
     } else {
       materialsList.value = []
     }
@@ -833,7 +836,7 @@ const getCourseMaterialsList = async () => {
 // 下载课程资料
 const downloadMaterial = (material) => {
   // 构建下载链接
-  const downloadUrl = `/api/course/material/download/${material.id}`
+  const downloadUrl = `/api/course/materials/${material.id}/download`
   window.open(downloadUrl, '_blank')
 }
 
@@ -856,36 +859,40 @@ const deleteMaterial = (material) => {
   }).catch(() => {})
 }
 
-// 提交上传
 const submitUpload = async () => {
   if (fileList.value.length === 0) {
     ElMessage.warning('请选择要上传的文件')
     return
   }
+  if (!uploadForm.description?.trim()) {
+    ElMessage.warning('请输入文件描述')
+    return
+  }
 
   uploadLoading.value = true
   try {
+    const file = fileList.value[0].raw
     const formData = new FormData()
-    formData.append('courseId', selectedCourse.value.id)
-    formData.append('uploaderId', useUserStore().userId)
-    formData.append('file', fileList.value[0].raw)
-    formData.append('description', uploadForm.description)
 
-    // 调用后端接口上传文件
+    // 🔥 严格按照后端参数顺序/类型 append
+    formData.append('courseId', String(selectedCourse.value.id)) // 后端接收String，必须转字符串
+    formData.append('name', file.name) // 传递原始文件名
+    formData.append('description', uploadForm.description.trim()) // 传递文件描述
+    formData.append('type', file.name.split('.').pop().toLowerCase()) // 自动提取文件后缀
+    formData.append('file', file)
+
     const res = await uploadCourseMaterial(formData)
     if (res.code === 200) {
       ElMessage.success('文件上传成功')
-      // 重新获取资料列表
       getCourseMaterialsList()
-      // 清空上传表单
       fileList.value = []
       uploadForm.description = ''
     } else {
-      ElMessage.error('文件上传失败: ' + res.message)
+      ElMessage.error(`上传失败: ${res.message}`)
     }
   } catch (err) {
-    console.error('文件上传失败:', err)
-    ElMessage.error('文件上传失败')
+    console.error('上传异常:', err)
+    ElMessage.error('文件上传失败，请检查后端日志')
   } finally {
     uploadLoading.value = false
   }

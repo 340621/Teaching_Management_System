@@ -123,7 +123,6 @@ com\example\student\service\impl\GradeServiceImpl.class
 com\example\student\controller\CourseStudentController.class
 com\example\student\controller\DepartmentController.class
 com\example\student\entity\TodoItem$TodoItemBuilder.class
-com\example\student\controller\CourseMaterialController.class
 com\example\student\entity\Major.class
 com\example\student\mapper\AdminMapper.class
 com\example\student\service\CourseService.class

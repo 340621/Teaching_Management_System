@@ -313,4 +313,9 @@
             u.name
         LIMIT 10
     </select>
+    
+    <!-- 通过教师编号查询用户ID -->
+    <select id="selectUserIdByTeacherNo" resultType="java.lang.Long">
+        SELECT user_id FROM teacher WHERE teacher_no = #{teacherNo}
+    </select>
 </mapper>

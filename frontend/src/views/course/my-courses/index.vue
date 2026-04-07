@@ -170,6 +170,7 @@ import { ElMessage } from 'element-plus'
 import { getStudentOwnCourses, getCourseDetail } from '@/api/course'
 import { getCourseMaterials } from '@/api/courseMaterial'
 import { useUserStore } from '@/stores/user'
+import request from '@/utils/request'
 
 const userStore = useUserStore()
 const studentId = ref(userStore.userId)
@@ -187,12 +188,22 @@ const courseMaterials = ref([])
 const currentCourseId = ref(0)
 
 // 学期选项
-const semesterOptions = ref([
-  { value: '2024-2025-1', label: '2024-2025学年第一学期' },
-  { value: '2024-2025-2', label: '2024-2025学年第二学期' },
-  { value: '2023-2024-1', label: '2023-2024学年第一学期' },
-  { value: '2023-2024-2', label: '2023-2024学年第二学期' }
-])
+const semesterOptions = ref([])
+
+// 获取学期列表
+async function getSemesters() {
+  try {
+    const response = await request({
+      url: '/selection/manage/semesters',
+      method: 'get'
+    })
+    if (response.code === 200 && response.data) {
+      semesterOptions.value = response.data
+    }
+  } catch (error) {
+    console.error('获取学期列表失败:', error)
+  }
+}
 
 // 课程统计数据
 const courseStats = ref({
@@ -338,7 +349,7 @@ function getCourseMaterialsList(courseId) {
   materialsLoading.value = true
   getCourseMaterials(courseId).then(response => {
     if (response && response.code === 200 && response.data) {
-      courseMaterials.value = response.data || []
+      courseMaterials.value = response.data.list || []
     } else {
       ElMessage.error('获取课程资料列表失败')
       courseMaterials.value = []
@@ -355,12 +366,13 @@ function getCourseMaterialsList(courseId) {
 /** 下载课程资料 */
 function downloadMaterial(row) {
   // 构建下载链接
-  const downloadUrl = `/api/course/material/download/${row.id}`
+  const downloadUrl = `/api/course/materials/${row.id}/download`
   // 打开新窗口下载
   window.open(downloadUrl, '_blank')
 }
 
-onMounted(() => {
+onMounted(async () => {
+  await getSemesters()
   getList()
 })
 </script>

@@ -7,19 +7,23 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.example.student.common.exception.BusinessException;
 import com.example.student.common.PageResult;
+import com.example.student.config.SystemConfig;
 import com.example.student.dto.CourseSelectionDTO;
 import com.example.student.dto.CourseSelectionQueryDTO;
 import com.example.student.entity.Course;
 import com.example.student.entity.CourseOffering;
 import com.example.student.entity.CourseSelection;
 import com.example.student.entity.Student;
+import com.example.student.entity.Teacher;
 import com.example.student.mapper.ClassMapper;
 import com.example.student.mapper.CourseMapper;
 import com.example.student.mapper.CourseOfferingMapper;
 import com.example.student.mapper.CourseSelectionMapper;
 import com.example.student.mapper.StudentMapper;
+import com.example.student.mapper.TeacherMapper;
 import com.example.student.service.CourseSelectionService;
 import com.example.student.util.ExcelUtils;
+import com.example.student.util.SecurityUtils;
 import com.example.student.vo.CourseSelectionManageVO;
 import com.example.student.vo.CourseSelectionStatisticsVO;
 import com.example.student.vo.CourseTypeStatisticsVO;
@@ -57,9 +61,24 @@ public class CourseSelectionServiceImpl extends ServiceImpl<CourseSelectionMappe
     private final CourseOfferingMapper courseOfferingMapper;
     private final StudentMapper studentMapper;
     private final ClassMapper classMapper;
+    private final TeacherMapper teacherMapper;
 
     @Override
     public PageResult<CourseSelectionManageVO> getSelectionList(CourseSelectionQueryDTO queryDTO) {
+        // 检查当前用户是否是教师，如果是则只显示自己课程的选课信息
+        Long userId = SecurityUtils.getUserId();
+        if (userId != null) {
+            boolean isTeacher = SecurityUtils.hasRole("teacher");
+            if (isTeacher) {
+                // 获取教师信息
+                Teacher teacher = teacherMapper.selectOne(new LambdaQueryWrapper<Teacher>().eq(Teacher::getUserId, userId));
+                if (teacher != null) {
+                    // 设置教师ID到查询参数中
+                    queryDTO.setTeacherId(teacher.getId());
+                }
+            }
+        }
+        
         IPage<CourseSelectionManageVO> page = courseSelectionMapper.selectSelectionPage(
                 new Page<>(queryDTO.getPageNum(), queryDTO.getPageSize()), queryDTO);
         
@@ -207,12 +226,17 @@ public class CourseSelectionServiceImpl extends ServiceImpl<CourseSelectionMappe
         String courseType = (String) params.get("courseType");
         String creditsRange = (String) params.get("creditsRange");
 
+        // 获取当前学期
+        Map<String, Object> settings = getSelectionSettings();
+        String currentSemester = (String) settings.get("currentSemester");
+
         IPage<Map<String, Object>> page = courseOfferingMapper.selectAvailableCourses(
                 new Page<>(pageNum, pageSize),
                 studentId,
                 courseName,
                 courseType,
-                creditsRange);
+                creditsRange,
+                currentSemester);
         
         return new PageResult<>(page.getRecords(), page.getTotal());
     }
@@ -229,6 +253,13 @@ public class CourseSelectionServiceImpl extends ServiceImpl<CourseSelectionMappe
             throw new BusinessException("课程不存在");
         }
         
+        // 检查课程是否属于当前学期
+        Map<String, Object> settings = getSelectionSettings();
+        String currentSemester = (String) settings.get("currentSemester");
+        if (!currentSemester.equals(offering.getSemester())) {
+            throw new BusinessException("只能选择当前学期的课程");
+        }
+        
         LambdaQueryWrapper<CourseSelection> wrapper = new LambdaQueryWrapper<>();
         wrapper.eq(CourseSelection::getStudentId, studentId)
                 .eq(CourseSelection::getCourseOfferingId, courseOfferingId)
@@ -243,7 +274,6 @@ public class CourseSelectionServiceImpl extends ServiceImpl<CourseSelectionMappe
             throw new BusinessException("该课程选课人数已满");
         }
         
-        Map<String, Object> settings = getSelectionSettings();
         boolean isSelectionTime = (boolean) settings.get("isSelectionTime");
         if (!isSelectionTime) {
             throw new BusinessException("当前不在选课时间范围内");
@@ -263,6 +293,18 @@ public class CourseSelectionServiceImpl extends ServiceImpl<CourseSelectionMappe
     @Override
     @Transactional(rollbackFor = Exception.class)
     public boolean withdrawCourse(Long studentId, Long courseOfferingId) {
+        CourseOffering offering = courseOfferingMapper.selectById(courseOfferingId);
+        if (offering == null) {
+            throw new BusinessException("课程不存在");
+        }
+        
+        // 检查课程是否属于当前学期
+        Map<String, Object> settings = getSelectionSettings();
+        String currentSemester = (String) settings.get("currentSemester");
+        if (!currentSemester.equals(offering.getSemester())) {
+            throw new BusinessException("只能退选当前学期的课程");
+        }
+        
         LambdaQueryWrapper<CourseSelection> wrapper = new LambdaQueryWrapper<>();
         wrapper.eq(CourseSelection::getStudentId, studentId)
                 .eq(CourseSelection::getCourseOfferingId, courseOfferingId)
@@ -273,7 +315,6 @@ public class CourseSelectionServiceImpl extends ServiceImpl<CourseSelectionMappe
             throw new BusinessException("未找到选课记录");
         }
         
-        Map<String, Object> settings = getSelectionSettings();
         boolean isSelectionTime = (boolean) settings.get("isSelectionTime");
         if (!isSelectionTime) {
             throw new BusinessException("当前不在选课时间范围内");
@@ -287,16 +328,18 @@ public class CourseSelectionServiceImpl extends ServiceImpl<CourseSelectionMappe
 
     @Override
     public Map<String, Object> getSelectionSettings() {
-        Map<String, Object> settings = new HashMap<>();
-        
-        settings.put("maxCourses", 10);
-        settings.put("maxCredits", 30);
-        settings.put("startTime", "2025-06-10 00:00:00");
-        settings.put("endTime", "2025-06-20 23:59:59");
-        settings.put("isSelectionTime", true);
-        settings.put("currentSemester", "2024-2025-2");
-        
-        return settings;
+        return SystemConfig.getInstance().getSelectionSettings();
+    }
+    
+    @Override
+    public boolean updateSelectionSettings(Map<String, Object> settings) {
+        try {
+            SystemConfig.getInstance().updateSelectionSettings(settings);
+            return true;
+        } catch (Exception e) {
+            log.error("更新选课设置失败", e);
+            return false;
+        }
     }
 
     @Override

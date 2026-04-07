@@ -7,8 +7,24 @@
         </div>
       </template>
 
+      <!-- 不在选课时间的提示 -->
+      <el-alert
+        v-if="!isTeacher && !selectionTimeValid"
+        title="选课时间提示"
+        type="warning"
+        :closable="false"
+        show-icon
+      >
+        <template #default>
+          <div class="selection-tips">
+            <p>当前不在选课时间范围内，无法进行选课操作</p>
+            <p>选课时间：{{ selectionStats.startTime }} 至 {{ selectionStats.endTime }}</p>
+          </div>
+        </template>
+      </el-alert>
+
       <el-tabs v-model="activeTab" @tab-click="handleTabClick">
-        <el-tab-pane label="可选课程" name="available">
+        <el-tab-pane v-if="!isTeacher && selectionTimeValid" label="可选课程" name="available">
           <!-- 搜索表单 -->
           <el-form :model="queryParams" ref="queryForm" :inline="true" v-show="showSearch">
             <el-form-item label="课程名称" prop="courseName">
@@ -330,12 +346,18 @@ const conflictWithCourse = ref(null)
 const currentSelectCourse = ref(null)
 const currentWithdrawCourse = ref(null)
 
+// 判断当前用户是否是教师
+const isTeacher = computed(() => {
+  const userInfo = userStore.userInfo
+  return userInfo && userInfo.roles && userInfo.roles.includes('teacher')
+})
+
 // 课程类型选项
 const courseTypeOptions = ref([
-  { value: '必修', label: '必修课' },
-  { value: '选修', label: '选修课' },
-  { value: '公选', label: '公共选修课' },
-  { value: '实践', label: '实践课' }
+  { value: 0, label: '必修课' },
+  { value: 1, label: '选修课' },
+  { value: 2, label: '公共选修课' },
+  { value: 3, label: '实践课' }
 ])
 
 // 选课统计数据
@@ -860,6 +882,9 @@ function saveAnalysis(courseCode, analysis) {
 
 /** 标签页切换处理 */
 function handleTabClick() {
+  // 每次切换标签页时都重新获取选课配置，确保显示最新的管理员配置
+  getSelectionConfig()
+  
   if (activeTab.value === 'available') {
     fetchAvailableCourses()
   } else if (activeTab.value === 'selected') {
@@ -872,6 +897,11 @@ onMounted(async () => {
   try {
     // 先获取选课设置
     await getSelectionConfig()
+    
+    // 如果是教师或不在选课时间，默认显示已选课程
+    if (isTeacher.value || !selectionTimeValid.value) {
+      activeTab.value = 'selected'
+    }
     
     // 然后同时获取可选课程和已选课程
     Promise.all([
@@ -1036,4 +1066,4 @@ onMounted(async () => {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
-</style> 
+</style>

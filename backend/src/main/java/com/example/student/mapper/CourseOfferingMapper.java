@@ -102,6 +102,7 @@ public interface CourseOfferingMapper extends BaseMapper<CourseOffering> {
      * @param courseName 课程名称
      * @param courseType 课程类型
      * @param creditsRange 学分范围
+     * @param currentSemester 当前学期
      * @return 可选课程列表
      */
     IPage<Map<String, Object>> selectAvailableCourses(
@@ -109,5 +110,14 @@ public interface CourseOfferingMapper extends BaseMapper<CourseOffering> {
             @Param("studentId") Long studentId,
             @Param("courseName") String courseName,
             @Param("courseType") String courseType,
-            @Param("creditsRange") String creditsRange);
+            @Param("creditsRange") String creditsRange,
+            @Param("currentSemester") String currentSemester);
+
+    /**
+     * 查询教师的课程选项列表
+     *
+     * @param teacherId 教师ID
+     * @return 课程选项列表
+     */
+    List<Map<String, Object>> selectTeacherCourseOptions(@Param("teacherId") Long teacherId);
 } 

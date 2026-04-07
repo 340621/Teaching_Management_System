@@ -164,6 +164,14 @@ public interface CourseSelectionService {
      * @return 选课设置信息
      */
     Map<String, Object> getSelectionSettings();
+    
+    /**
+     * 更新选课设置
+     *
+     * @param settings 选课设置信息
+     * @return 是否成功
+     */
+    boolean updateSelectionSettings(Map<String, Object> settings);
 
     /**
      * 检查课程时间冲突

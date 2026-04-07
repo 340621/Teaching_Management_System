@@ -63,9 +63,8 @@
         <el-table-column label="操作" min-width="220" fixed="right">
           <template #default="scope">
             <el-button type="primary" link @click="openDialog('edit', scope.row)">编辑</el-button>
-            <el-button type="success" link @click="handleAttendance(scope.row)">
-              <el-icon><Clock /></el-icon>考勤管理
-            </el-button>
+            <el-button type="info" link @click="handleViewStudents(scope.row)">查看学生</el-button>
+            <el-button type="info" link @click="handleViewMaterials(scope.row)">查看资料</el-button>
             <el-button type="danger" link @click="handleDelete(scope.row)">删除</el-button>
           </template>
         </el-table-column>
@@ -280,7 +279,7 @@ function handleDelete(row) {
 }
 function fetchCourseAndTeacher() {
   // 获取课程列表
-  getAllCourses().then(res => { 
+  getAllCourses().then(res => {
     // 确保返回的数据是正确的数组格式
     if (res.code === 200 && res.data && res.data.list) {
       courseList.value = res.data.list.map(item => ({
@@ -295,70 +294,78 @@ function fetchCourseAndTeacher() {
     console.error('获取课程列表异常:', err);
     courseList.value = [];
   });
-  
-  // 获取教师列表
-  getAllTeachers().then(res => {
-    // 确保返回的数据是正确的数组格式
-    if (res.code === 200 && res.data && res.data.list) {
-      teacherList.value = res.data.list.map(item => ({
-        id: item.id,
-        name: item.name || (item.user ? item.user.name : '未知教师')
-      }));
-    } else {
-      teacherList.value = [];
-      console.error('获取教师列表失败:', res);
-    }
-  }).catch(err => {
-    console.error('获取教师列表异常:', err);
-    teacherList.value = [];
-  });
+
+//   // 获取教师列表
+//   getAllTeachers().then(res => {
+//     // 确保返回的数据是正确的数组格式
+//     if (res.code === 200 && res.data && res.data.list) {
+//       teacherList.value = res.data.list.map(item => ({
+//         id: item.id,
+//         name: item.name || (item.user ? item.user.name : '未知教师')
+//       }));
+//     } else {
+//       teacherList.value = [];
+//       console.error('获取教师列表失败:', res);
+//     }
+//   }).catch(err => {
+//     console.error('获取教师列表异常:', err);
+//     teacherList.value = [];
+//   });
+  teacherList.value = [];
 }
-function handleAttendance(row) {
-  // 跳转到考勤记录页面
-  console.log('跳转到考勤记录页面，参数:', {
-    courseId: row.courseId,
-    courseOfferingId: row.id,
-    row: row
-  })
-  
-  try {
-    // 提示用户正在跳转
-    ElMessage.info('正在跳转到考勤记录页面...');
-    
-    // 使用后台菜单中定义的路径，而不是路由配置中的路径
-    // 从路由日志看，正确的路径是/attendance-record
-    router.push({
-      path: '/attendance-record',
-      query: {
-        courseId: row.courseId,
-        courseOfferingId: row.id
-      }
-    }).catch(err => {
-      console.error('路由跳转失败，尝试备用方案:', err);
-      
-      // 尝试备用导航方式 - 先导航到首页，再尝试考勤路径
-      router.push('/').then(() => {
-        setTimeout(() => {
-          router.push({
-            path: '/attendance-record',
-            query: {
-              courseId: row.courseId,
-              courseOfferingId: row.id,
-              _t: new Date().getTime() // 添加时间戳避免缓存
-            }
-          });
-        }, 300);
-      });
+
+
+  function handleViewStudents(row) {
+    // 跳转到查看学生页面
+    console.log('跳转到查看学生页面，参数:', {
+      courseId: row.courseId,
+      courseOfferingId: row.id
     });
-  } catch (error) {
-    console.error('考勤管理跳转错误:', error);
-    ElMessage.error('页面跳转发生错误，请联系管理员');
+
+    try {
+      router.push({
+        path: '/course/students',
+        query: {
+          courseId: row.courseId,
+          courseOfferingId: row.id
+        }
+      }).catch(err => {
+        console.error('路由跳转失败:', err);
+        ElMessage.error('页面跳转发生错误，请联系管理员');
+      });
+    } catch (error) {
+      console.error('查看学生跳转错误:', error);
+      ElMessage.error('页面跳转发生错误，请联系管理员');
+    }
   }
-}
-onMounted(() => {
-  fetchList()
-  fetchCourseAndTeacher()
-})
+
+  function handleViewMaterials(row) {
+    // 跳转到查看资料页面
+    console.log('跳转到查看资料页面，参数:', {
+      courseId: row.courseId
+    });
+
+    try {
+      router.push({
+        path: '/course/materials',
+        query: {
+          courseId: row.courseId
+        }
+      }).catch(err => {
+        console.error('路由跳转失败:', err);
+        ElMessage.error('页面跳转发生错误，请联系管理员');
+      });
+    } catch (error) {
+      console.error('查看资料跳转错误:', error);
+      ElMessage.error('页面跳转发生错误，请联系管理员');
+    }
+  }
+
+  onMounted(() => {
+    fetchList()
+    fetchCourseAndTeacher()
+  })
+
 </script>
 
 <style scoped>

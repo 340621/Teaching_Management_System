@@ -17,6 +17,7 @@ import com.example.student.mapper.CourseOfferingMapper;
 import com.example.student.mapper.TeacherMapper;
 import com.example.student.service.CourseOfferingService;
 import com.example.student.service.CourseSelectionService;
+import com.example.student.util.SecurityUtils;
 import com.example.student.vo.CourseOfferingVO;
 import com.example.student.vo.TeacherVO;
 import lombok.RequiredArgsConstructor;
@@ -43,6 +44,21 @@ public class CourseOfferingServiceImpl extends ServiceImpl<CourseOfferingMapper,
     public PageResult<CourseOfferingVO> pageList(CourseOfferingQueryDTO queryDTO) {
         Page<CourseOffering> page = new Page<>(queryDTO.getPageNum(), queryDTO.getPageSize());
         LambdaQueryWrapper<CourseOffering> wrapper = new LambdaQueryWrapper<>();
+        
+        // 检查当前用户是否是教师，如果是则只显示自己的课程
+        Long userId = SecurityUtils.getUserId();
+        if (userId != null) {
+            boolean isTeacher = SecurityUtils.hasRole("teacher");
+            if (isTeacher) {
+                // 获取教师信息
+                Teacher teacher = teacherMapper.selectOne(new LambdaQueryWrapper<Teacher>().eq(Teacher::getUserId, userId));
+                if (teacher != null) {
+                    // 只显示当前教师的课程
+                    wrapper.eq(CourseOffering::getTeacherId, teacher.getId());
+                }
+            }
+        }
+        
         // 学期条件
         if (queryDTO.getSemester() != null && !queryDTO.getSemester().isEmpty()) {
             wrapper.eq(CourseOffering::getSemester, queryDTO.getSemester());

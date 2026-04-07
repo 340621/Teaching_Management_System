@@ -31,8 +31,7 @@ public class SystemConfigController {
      */
     @PutMapping("/selection")
     public Result<Boolean> updateSelectionSettings(@RequestBody Map<String, Object> settings) {
-        // 这里可以添加更新逻辑
-        // 目前由于配置是硬编码的，所以暂时返回成功
-        return Result.success(true);
+        boolean success = courseSelectionService.updateSelectionSettings(settings);
+        return Result.success(success);
     }
 }

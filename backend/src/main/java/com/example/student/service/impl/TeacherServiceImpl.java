@@ -459,4 +459,28 @@ public class TeacherServiceImpl extends ServiceImpl<TeacherMapper, Teacher> impl
     public Teacher getTeacherByUserId(Long userId) {
         return teacherMapper.selectTeacherByUserId(userId);
     }
+
+    @Override
+    public List<TeacherVO> getAllTeachers() {
+        try {
+            // 直接调用你原本的分页查询方法（查询所有数据）
+            TeacherQueryDTO queryDTO = new TeacherQueryDTO();
+            queryDTO.setPageNum(1);
+            queryDTO.setPageSize(Integer.MAX_VALUE); // 查全部
+
+            // 获取分页结果
+            PageResult<TeacherVO> pageResult = pageTeacher(queryDTO);
+
+            if (pageResult == null) {
+                return new ArrayList<>();
+            }
+
+            // 使用正确的getRows()方法获取数据列表
+            return pageResult.getRows() == null ? new ArrayList<>() : pageResult.getRows();
+
+        } catch (Exception e) {
+            log.error("获取所有教师列表失败", e);
+            throw new BusinessException("获取教师列表失败");
+        }
+    }
 }

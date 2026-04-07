@@ -299,4 +299,9 @@
     <select id="selectStudentIdByUserId" resultType="java.lang.Long">
         SELECT id FROM student WHERE user_id = #{userId}
     </select>
+    
+    <!-- 通过学号查询用户ID -->
+    <select id="selectUserIdByStudentNo" resultType="java.lang.Long">
+        SELECT user_id FROM student WHERE student_no = #{studentNo}
+    </select>
 </mapper> 

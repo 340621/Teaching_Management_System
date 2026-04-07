@@ -148,4 +148,11 @@ public interface TeacherService {
      * @return 教师信息
      */
     Teacher getTeacherByUserId(Long userId);
+
+    /**
+     * 获取所有教师列表
+     *
+     * @return 教师列表
+     */
+    List<TeacherVO> getAllTeachers();
 } 

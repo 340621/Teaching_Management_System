@@ -65,6 +65,18 @@
               </el-select>
             </el-form-item>
           </el-col>
+          <el-col :span="12">
+            <el-form-item label="授课教师" prop="teacherId">
+              <el-select v-model="form.teacherId" placeholder="请选择教师" style="width: 100%">
+                <el-option
+                  v-for="item in teacherList"
+                  :key="item.id"
+                  :label="item.name"
+                  :value="item.id"
+                />
+              </el-select>
+            </el-form-item>
+          </el-col>
           <el-col :span="24">
             <el-form-item label="课程描述" prop="description">
               <el-input 
@@ -162,6 +174,7 @@ import { ElMessage } from 'element-plus'
 import { addCourse } from '@/api/course'
 import { getAllDepartments } from '@/api/department'
 import { getAllMajors } from '@/api/major'
+import { getAllTeachers } from '@/api/teacher'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
@@ -173,6 +186,8 @@ const departmentList = ref([])
 const majorList = ref([])
 // 课程列表
 const courseList = ref([])
+// 教师列表
+const teacherList = ref([])
 
 // 表单数据
 const form = reactive({
@@ -182,6 +197,7 @@ const form = reactive({
   hours: 48,
   type: 0,
   departmentId: null,
+  teacherId: null,
   description: '',
   majorIds: [],
   recommendSemester: '',
@@ -209,6 +225,9 @@ const rules = {
   ],
   departmentId: [
     { required: true, message: '请选择开课院系', trigger: 'change' }
+  ],
+  teacherId: [
+    { required: true, message: '请选择授课教师', trigger: 'change' }
   ]
 }
 
@@ -217,6 +236,7 @@ onMounted(() => {
   getDepartmentList()
   getMajorList()
   getCourseList()
+  getTeacherList()
 })
 
 // 获取院系列表
@@ -261,6 +281,19 @@ const getCourseList = async () => {
   } catch (err) {
     console.error('获取课程列表失败:', err)
     ElMessage.error('获取课程列表失败')
+  }
+}
+
+// 获取教师列表
+const getTeacherList = async () => {
+  try {
+    const res = await getAllTeachers()
+    if (res && res.data) {
+      teacherList.value = res.data
+    }
+  } catch (err) {
+    console.error('获取教师列表失败:', err)
+    ElMessage.error('获取教师列表失败')
   }
 }
 

@@ -142,8 +142,8 @@ import { useUserStore } from '@/stores/user'
 // 路由
 const router = useRouter()
 const route = useRoute()
-const courseId = computed(() => route.params.courseId)
-const courseOfferingId = computed(() => route.params.id)
+const courseId = computed(() => route.query.courseId)
+const courseOfferingId = computed(() => route.query.courseOfferingId)
 
 // 用户信息
 const userStore = useUserStore()

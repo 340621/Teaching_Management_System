@@ -125,6 +125,7 @@
         WHERE 
             co.status = 0  -- 正常状态
             AND cs.course_offering_id IS NULL  -- 学生未选
+            AND co.semester = #{currentSemester}  -- 只显示当前学期的课程
             <if test="courseName != null and courseName != ''">
                 AND c.name LIKE CONCAT('%', #{courseName}, '%')
             </if>
@@ -154,5 +155,20 @@
         SELECT DISTINCT semester 
         FROM course_offering 
         ORDER BY semester DESC
+    </select>
+
+    <!-- 查询教师的课程选项列表 -->
+    <select id="selectTeacherCourseOptions" parameterType="java.lang.Long" resultType="java.util.Map">
+        SELECT
+            DISTINCT c.id as value,
+            CONCAT(c.name, ' (', c.code, ')') as label
+        FROM
+            course c
+        JOIN
+            course_offering co ON c.id = co.course_id
+        WHERE
+            co.teacher_id = #{teacherId}
+        ORDER BY
+            label
     </select>
 </mapper> 

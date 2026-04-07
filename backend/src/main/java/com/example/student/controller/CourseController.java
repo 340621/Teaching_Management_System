@@ -8,6 +8,7 @@ import com.example.student.entity.Course;
 import com.example.student.entity.SysUser;
 import com.example.student.entity.Teacher;
 import com.example.student.mapper.TeacherMapper;
+import com.example.student.service.CourseMaterialService;
 import com.example.student.service.CourseService;
 import com.example.student.util.SecurityUtils;
 import io.swagger.v3.oas.annotations.Operation;
@@ -39,6 +40,7 @@ public class CourseController {
 
     private final CourseService courseService;
     private final TeacherMapper teacherMapper;
+    private final CourseMaterialService courseMaterialService;
 
     /**
      * 获取课程列表（分页）
@@ -195,4 +197,63 @@ public class CourseController {
         PageResult<Course> pageResult = courseService.getTeacherCourses(teacher.getId(), queryDTO);
         return Result.success(pageResult);
     }
-} 
+
+    /**
+     * 获取课程资料列表
+     */
+    @Operation(summary = "获取课程资料列表")
+    @GetMapping("/{courseId}/materials")
+    //@PreAuthorize("hasAnyAuthority('course:course:list', 'course:materials:list')")
+    public Result<PageResult<?>> getCourseMaterials(
+            @PathVariable("courseId") @NotNull Long courseId,
+            @RequestParam(defaultValue = "1") Integer pageNum,
+            @RequestParam(defaultValue = "10") Integer pageSize) {
+        PageResult<?> pageResult = courseMaterialService.getCourseMaterials(courseId, pageNum, pageSize);
+        return Result.success(pageResult);
+    }
+
+    /**
+     * 上传课程资料
+     */
+    @Operation(summary = "上传课程资料")
+    @PostMapping("/materials/upload")
+    //@PreAuthorize("hasAuthority('course:materials:upload')")
+    public Result<?> uploadCourseMaterial(
+            @RequestParam("courseId") @NotNull String courseIdStr,
+            @RequestParam("name") @NotNull String name,
+            @RequestParam("description") @NotNull String description,
+            @RequestParam("type") @NotNull String type,
+            @RequestParam("file") @NotNull MultipartFile file) {
+        try {
+            Long courseId = Long.parseLong(courseIdStr);
+            boolean result = courseMaterialService.uploadCourseMaterial(courseId, name, description, type, file);
+            return result ? Result.success() : Result.error("上传失败");
+        } catch (NumberFormatException e) {
+            return Result.error("课程ID格式错误");
+        }
+    }
+
+    /**
+     * 删除课程资料
+     */
+    @Operation(summary = "删除课程资料")
+    @DeleteMapping("/materials/{id}")
+    @PreAuthorize("hasAuthority('course:materials:delete')")
+    public Result<?> deleteCourseMaterial(@PathVariable("id") @NotNull Long id) {
+        boolean result = courseMaterialService.deleteCourseMaterial(id);
+        return result ? Result.success() : Result.error("删除失败");
+    }
+
+    /**
+     * 下载课程资料
+     */
+    @Operation(summary = "下载课程资料")
+    @GetMapping("/materials/{id}/download")
+    //@PreAuthorize("hasAnyAuthority('course:materials:download', 'student:materials:download')")
+    public void downloadCourseMaterial(
+            @PathVariable("id") @NotNull Long id,
+            HttpServletResponse response) throws IOException {
+        courseMaterialService.downloadCourseMaterial(id, response);
+    }
+}
+ 
